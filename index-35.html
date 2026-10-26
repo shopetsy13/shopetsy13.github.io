@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://translate.googleapis.com; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light dark">
+<meta name="google-site-verification" content="DoNnm4zUcxv_qlz4oGORgNPntoY4k3waQ1vlBdlA-Lk" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="theme-color" content="#16231F">
+<meta name="description" content="Free calculators: BMI, EMI, Zakat, GST, gold, age, percentage, discount, calories, water, land area, unit converter and 35 math formulas.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Calculator10">
+<meta property="og:title" content="Calculator10 - Free Online Calculators">
+<meta property="og:description" content="Free calculators: BMI, EMI, Zakat, GST, gold, age, percentage, discount, calories, water, land area, unit converter and 35 math formulas.">
+<meta property="og:url" content="https://shopetsy13.github.io/">
+<meta property="og:image" content="https://shopetsy13.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Calculator10 - free everyday calculators">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Calculator10 - Free Online Calculators">
+<meta name="twitter:description" content="Free calculators: BMI, EMI, Zakat, GST, gold, age, percentage, discount, calories, water, land area, unit converter and 35 math formulas.">
+<meta name="twitter:image" content="https://shopetsy13.github.io/og-image.png">
+<title>Calculator10 - Free Online Calculators</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;500;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;500;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{
+  --page:#DCE3DE;--device:#F3F5F1;--ink:#16231F;--muted:#55655F;--line:#C3CCC6;
+  --field:#E6EBE6;--key:#FFFFFF;--key-edge:#BAC4BE;--key-ink:#16231F;
+  --op:#2A3A35;--op-edge:#121C19;--op-ink:#FFFFFF;
+  --accent:#C9480F;--accent-edge:#8F3409;--accent-ink:#FFFFFF;
+  --clear:#F6D9CE;--clear-edge:#DDB3A3;--clear-ink:#8A2E0B;
+  --result-bg:#16231F;--result-ink:#EAF1EC;
+  --mono:'Chivo Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
+  --sans:'Figtree','Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+}
+body.dark-theme{
+  --page:#0D1613;--device:#17231F;--ink:#E9F0EA;--muted:#8FA39B;--line:#2B3B35;
+  --field:#0F1A16;--key:#22332D;--key-edge:#0B1411;--key-ink:#E9F0EA;
+  --op:#3E564D;--op-edge:#1B2A24;--op-ink:#FFFFFF;
+  --accent:#FF7A2E;--accent-edge:#B8480F;--accent-ink:#1A0E06;
+  --clear:#4A2A1E;--clear-edge:#25140D;--clear-ink:#FFD9C8;
+  --result-bg:#E9F0EA;--result-ink:#16231F;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--page);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:24px 16px 0;transition:background-color .25s,color .25s}
+button,input,select{font-family:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+.app{width:100%;max-width:940px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px}
+.brand{font-family:var(--mono);font-weight:700;font-size:19px;letter-spacing:-.02em;margin:0}
+.tagline{margin:0;color:var(--muted);font-size:12px;line-height:1.3}
+.top-actions{display:flex;gap:8px;align-items:center}
+body.skin-golden{--page:#F6ECD2;--device:#FFF8E6;--ink:#3A2A06;--muted:#7A6530;--line:#E3CF9A;--field:#F3E4B8;--key:#FFFBEF;--key-edge:#E0CB93;--key-ink:#3A2A06;--op:#8A5A00;--op-edge:#5E3D00;--op-ink:#FFFFFF;--accent:#9A5B00;--accent-edge:#6B3F00;--accent-ink:#FFFFFF;--clear:#F5DDB0;--clear-edge:#DDBE7E;--clear-ink:#6B3F00;--result-bg:#3A2A06;--result-ink:#FFF1C9}
+body.skin-pink{--page:#FBE4EE;--device:#FFF3F8;--ink:#3B1224;--muted:#8A4A66;--line:#EFC1D5;--field:#F9D8E6;--key:#FFFFFF;--key-edge:#EBB9CF;--key-ink:#3B1224;--op:#C2185B;--op-edge:#8E0F42;--op-ink:#FFFFFF;--accent:#C2185B;--accent-edge:#8E0F42;--accent-ink:#FFFFFF;--clear:#F9D0E0;--clear-edge:#E7A3BF;--clear-ink:#8E0F42;--result-bg:#5B1236;--result-ink:#FFE8F1}
+.top-actions{flex-wrap:wrap;justify-content:flex-end}
+select.theme-toggle-btn{appearance:auto;max-width:150px}
+/* Header: Install App on top; Skin + mic (🎤 Calc) on one row underneath, no extra space */
+#skin-select{width:auto;min-width:0;height:36px;padding:0 8px;font-size:13px}
+#voice-nav-btn{height:36px;padding:0 9px;font-size:13px;white-space:nowrap}
+.top-actions{gap:6px}
+/* Skin dropdown and 🎤 Calc always stay on one row */
+.ctl{display:flex;flex-wrap:nowrap;align-items:center;gap:6px}
+.ctl #skin-select{flex:0 0 auto;max-width:none}
+@media (max-width:350px){.ctl #skin-select,#voice-nav-btn{font-size:12px;padding-left:6px;padding-right:6px}.brand{font-size:17px}}
+.calc-actions{margin:0 0 12px}
+.slider{position:relative;overflow:hidden;border-radius:18px;margin:0 0 20px;background:var(--result-bg);color:var(--result-ink)}
+.slider{width:100%;max-width:100%;min-width:0;box-sizing:border-box}
+.slider .track{width:100%}
+.slide{min-width:0}
+.track{display:flex;transition:transform .5s ease}
+.slide{flex:0 0 100%;box-sizing:border-box;padding:20px 18px 58px;min-height:150px;border-left:6px solid var(--accent)}
+.slide h2{margin:0 0 6px;font-size:19px;color:inherit;letter-spacing:0}
+.slide p{margin:0 0 12px;font-size:14.5px;line-height:1.5;opacity:.93}
+.s-link{display:inline-block;background:transparent;color:inherit;border:1px solid currentColor;border-radius:999px;padding:7px 16px;min-height:36px;font-size:13.5px;font-weight:600;cursor:pointer;text-decoration:none}
+.s-ctrl{position:absolute;left:0;right:0;bottom:10px;display:flex;align-items:center;justify-content:center;gap:8px}
+.s-btn{background:rgba(255,255,255,.16);color:inherit;border:0;border-radius:999px;min-width:36px;height:36px;font-size:17px;cursor:pointer}
+.s-dots{display:flex;gap:2px}
+.s-dot{width:22px;height:22px;border:0;background:transparent;padding:0;cursor:pointer;position:relative}
+.s-dot::before{content:"";position:absolute;inset:6px;border-radius:50%;background:rgba(255,255,255,.4)}
+.s-dot[aria-current="true"]::before{background:#fff}
+body.dark-theme .s-btn{background:rgba(0,0,0,.14)}
+body.dark-theme .s-dot::before{background:rgba(0,0,0,.3)}
+body.dark-theme .s-dot[aria-current="true"]::before{background:#16231F}
+@media (prefers-reduced-motion:reduce){.track{transition:none}}
+#reviews .slide{min-height:0;padding:8px 12px 40px}
+#hero .slide{min-height:0;padding:12px 14px 46px}
+#hero .slide h2{font-size:15px;margin-bottom:3px}
+#hero .slide p{font-size:12.5px;line-height:1.4;margin-bottom:8px}
+#hero .s-link{padding:4px 12px;min-height:30px;font-size:12px}
+#hero .s-ctrl{bottom:6px}
+#hero .s-btn{height:28px;min-width:30px;font-size:14px}
+#hero .s-dot{width:16px;height:16px}
+#reviews.single .slide{padding:9px 14px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px}
+#reviews.single .slide h2,#reviews.single .slide p{margin:0}
+#reviews.single .slide .s-link{margin:0}
+#reviews .slide h2{font-size:13px;margin-bottom:2px}
+#reviews .slide p{font-size:11.5px;line-height:1.35;margin-bottom:6px}
+#reviews .s-link{padding:3px 10px;min-height:26px;font-size:11.5px}
+.section-title{font-size:13px;margin:14px 0 6px;text-align:center}
+.share-row{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin:0 0 12px;max-width:100%}
+.share-row a,.share-row button{display:inline-flex;align-items:center;white-space:normal;min-width:0;max-width:100%;min-height:30px;padding:4px 9px;font-size:11.5px !important;background:var(--device);color:var(--ink);border:1px solid var(--line);border-radius:999px;font-size:14px;font-weight:600;text-decoration:none;cursor:pointer}
+.share-row a:hover,.share-row button:hover{border-color:var(--accent)}
+.review-name{font-weight:700;font-size:14px;opacity:.95}
+
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--device);padding:10px 14px;border-radius:0 0 10px 0;z-index:10}
+.skip:focus{left:0}
+.r-actions{margin-top:10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.r-act{background:transparent;color:inherit;border:1px solid currentColor;border-radius:999px;padding:6px 14px;min-height:36px;font-size:13px;font-weight:600;cursor:pointer;opacity:.9}
+.r-act:hover{opacity:1}
+.r-status{font-size:13px}
+.preview{min-height:20px;padding:2px 8px 0;text-align:right;font-family:var(--mono);font-size:14px;color:var(--muted);direction:ltr}
+#install-btn{background:var(--accent);color:var(--accent-ink);border-color:var(--accent-edge)}
+.theme-toggle-btn[hidden]{display:none}
+.theme-toggle-btn{background:var(--device);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap}
+
+.layout{display:grid;grid-template-columns:200px minmax(0,1fr);gap:20px;align-items:start}
+.tabs{display:flex;flex-direction:column;gap:2px}
+.tab-group{margin:14px 0 4px;padding-left:12px;font-size:13px;font-weight:600;color:var(--muted)}
+.tab-group:first-child{margin-top:0}
+.tab-ico{display:inline-block;width:1.4em;text-align:center;margin-right:2px}
+a.tab-btn{display:block;text-decoration:none;color:inherit;box-sizing:border-box}
+.tab-btn{display:block;width:100%;text-align:left;background:transparent;border:0;border-left:3px solid transparent;border-radius:0 8px 8px 0;padding:9px 12px;font-size:15px;font-weight:500;cursor:pointer}
+.tab-btn:hover{background:var(--device)}
+.tab-btn.active{background:var(--device);border-left-color:var(--accent);font-weight:700}
+
+.device{background:var(--device);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 1px 0 #ffffff80 inset,0 18px 40px -22px #0a1a1566}
+.calc-sec{display:none}.calc-sec.active{display:block}
+h2{font-size:20px;margin:0 0 18px;letter-spacing:-.01em}
+
+.display{width:100%;height:84px;background:var(--field);border:1px solid var(--line);border-radius:14px;text-align:right;padding:0 18px;font-family:var(--mono);font-size:clamp(26px,6vw,36px);font-weight:500;margin-bottom:16px;box-shadow:inset 0 2px 6px #0000001a}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+button.btn{height:58px;border:0;border-radius:12px;background:var(--key);color:var(--key-ink);font-family:var(--mono);font-size:20px;font-weight:500;cursor:pointer;box-shadow:0 3px 0 var(--key-edge);transition:transform .06s,box-shadow .06s;min-width:0;padding:0}
+button.btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--key-edge)}
+button.btn.op{background:var(--op);color:var(--op-ink);box-shadow:0 3px 0 var(--op-edge)}
+button.btn.op:active{box-shadow:0 1px 0 var(--op-edge)}
+button.btn.fn{background:var(--field);box-shadow:0 3px 0 var(--key-edge);font-size:17px}
+button.btn.clear-key{background:var(--clear);color:var(--clear-ink);box-shadow:0 3px 0 var(--clear-edge)}
+button.btn.equals-key{background:var(--accent);color:var(--accent-ink);box-shadow:0 3px 0 var(--accent-edge)}
+button.btn.equals-key:active{box-shadow:0 1px 0 var(--accent-edge)}
+button.btn.wide{grid-column:span 2}
+.note{font-size:13px;color:var(--muted);line-height:1.55;margin:14px 0 0;max-width:62ch}
+
+.history-box{margin-top:16px;border-top:1px dashed var(--line);padding-top:12px;max-height:150px;overflow-y:auto;display:none}
+.history-box h4{margin:0 0 6px;font-size:13px;font-weight:600;color:var(--muted)}
+.history-item{font-family:var(--mono);font-size:13px;padding:5px 0;color:var(--muted);overflow-wrap:anywhere;border-bottom:1px solid var(--line)}
+.history-item:last-child{border-bottom:0}
+
+.form{max-width:460px}
+.input-group{margin-bottom:16px}
+.input-group label{display:block;margin-bottom:6px;font-weight:600;font-size:14px}
+.input-group input,.input-group select{width:100%;height:48px;padding:0 14px;background:var(--field);border:1px solid var(--line);border-radius:10px;font-size:16px;box-shadow:inset 0 2px 4px #0000000f}
+.input-group input:focus,.input-group select:focus{border-color:var(--accent)}
+.date-row{position:relative;display:flex;gap:8px;align-items:center}
+.date-row #dob-text{flex:1;min-width:0;font-family:var(--mono);letter-spacing:.04em}
+.icon-btn{flex:0 0 48px;height:48px;border:1px solid var(--line);border-radius:10px;background:var(--key);box-shadow:0 3px 0 var(--key-edge);font-size:19px;cursor:pointer;padding:0;transition:transform .06s,box-shadow .06s}
+.icon-btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--key-edge)}
+.dob-native{position:absolute;right:0;bottom:0;width:1px;height:1px;opacity:0;pointer-events:none;border:0;padding:0}
+.f-tools{display:grid;grid-template-columns:minmax(0,1fr) 190px 150px;gap:10px;margin-bottom:12px}
+.f-tools input,.f-tools select{height:46px;padding:0 14px;background:var(--field);border:1px solid var(--line);border-radius:10px;font-size:16px;width:100%}
+.f-cat h3{margin:22px 0 10px;font-size:16px;color:var(--muted);font-weight:700}
+.f-item{background:var(--key);border:1px solid var(--line);border-radius:12px;margin-bottom:8px;overflow:hidden}
+.f-item summary{cursor:pointer;padding:12px 14px;list-style:none;display:flex;flex-direction:column;gap:4px}
+.f-item summary::-webkit-details-marker{display:none}
+.f-name{font-weight:700;font-size:15px}
+.f-imp{font-size:13px;color:var(--ink);background:var(--field);border-radius:8px;padding:4px 10px;align-self:flex-start;border-inline-start:3px solid var(--accent)}
+.f-formula{font-family:var(--mono);font-size:14px;color:var(--accent);overflow-wrap:anywhere;line-height:1.5}
+.f-item[open]{border-color:var(--accent)}
+.f-body{padding:2px 14px 14px;border-top:1px dashed var(--line)}
+.f-desc{margin:10px 0;font-size:14px;color:var(--muted)}
+.f-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:12px}
+.f-fields .input-group{margin:0}
+.f-fields .input-group label{font-size:13px}
+.f-body .action-btn{height:44px;font-size:15px}
+.f-result{display:none;margin-top:12px;padding:12px 14px;background:var(--result-bg);color:var(--result-ink);border-radius:10px;border-left:6px solid var(--accent);font-family:var(--mono);font-size:14px;line-height:1.7;white-space:pre-line;overflow-wrap:anywhere}
+@media(max-width:760px){.f-tools{grid-template-columns:minmax(0,1fr)}}
+.action-btn{width:100%;height:50px;background:var(--accent);color:var(--accent-ink);border:0;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 3px 0 var(--accent-edge);transition:transform .06s,box-shadow .06s}
+.action-btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--accent-edge)}
+.result{display:none;margin-top:18px;padding:16px 18px;background:var(--result-bg);color:var(--result-ink);border-radius:12px;font-family:var(--mono);font-size:15px;line-height:1.8;overflow-wrap:anywhere;border-left:6px solid var(--accent)}
+
+footer{width:100%;max-width:940px;margin-top:32px;padding:20px 4px 28px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px}
+footer p{margin:0}
+footer a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;margin-right:14px}
+footer a:last-child{margin-right:0}
+
+@media(max-width:760px){
+  body{padding:16px 10px 0}
+  .layout{grid-template-columns:minmax(0,1fr);gap:14px}
+  .tabs{flex-direction:row;overflow-x:auto;gap:6px;padding-bottom:6px;scrollbar-width:thin}
+  .tab-group{display:none}
+  .tab-btn{width:auto;flex:0 0 auto;white-space:nowrap;border:1px solid var(--line);border-radius:999px;padding:8px 14px;background:var(--device)}
+  .tab-btn.active{background:var(--ink);color:var(--device);border-color:var(--ink)}
+  .device{padding:16px;border-radius:18px}
+  button.btn{height:54px;font-size:19px}
+  .display{height:76px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to calculators</a>
+<div class="app">
+  <header class="topbar">
+    <div>
+      <h1 class="brand">Calculator10</h1>
+      <p class="tagline">Math · Money · Health · Word counting · Free</p>
+    </div>
+    <div class="top-actions">
+      <button class="theme-toggle-btn" id="install-btn" type="button" hidden>📲 Install App</button>
+      <span class="ctl">
+        <select class="theme-toggle-btn" id="skin-select" aria-label="Calculator skin"><option value="classic">🎨 Classic</option><option value="golden">✨ Golden</option><option value="dark">🌙 Dark</option><option value="pink">🌸 Pink</option></select>
+        <button class="theme-toggle-btn" id="voice-nav-btn" type="button" hidden aria-label="Say a calculator name to open it" title="Say a calculator name to open it">🎤 Calc</button>
+      </span>
+      <button class="theme-toggle-btn" id="theme-btn" type="button" onclick="toggleTheme()" hidden>🌙 Dark</button>
+    </div>
+  </header>
+
+
+  <div class="layout">
+    <nav class="tabs" aria-label="Calculator categories">
+      <div class="tab-group">Everyday</div>
+      <button class="tab-btn active" type="button" data-tab="simple" onclick="switchTab('simple',this)"><span class="tab-ico" aria-hidden="true">🧮</span> Simple</button>
+      <button class="tab-btn" type="button" data-tab="sci" onclick="switchTab('sci',this)"><span class="tab-ico" aria-hidden="true">🔬</span> Scientific</button>
+      <button class="tab-btn" type="button" data-tab="pct" onclick="switchTab('pct',this)"><span class="tab-ico" aria-hidden="true">％</span> Percentage</button>
+      <button class="tab-btn" type="button" data-tab="discount" onclick="switchTab('discount',this)"><span class="tab-ico" aria-hidden="true">🏷️</span> Discount</button>
+      <button class="tab-btn" type="button" data-tab="age" onclick="switchTab('age',this)"><span class="tab-ico" aria-hidden="true">🎂</span> Age</button>
+      <button class="tab-btn" type="button" data-tab="land" onclick="switchTab('land',this)"><span class="tab-ico" aria-hidden="true">🌾</span> Land area</button>
+      <button class="tab-btn" type="button" data-tab="units" onclick="switchTab('units',this)"><span class="tab-ico" aria-hidden="true">📏</span> Unit converter</button>
+      <div class="tab-group">Study</div>
+      <button class="tab-btn" type="button" data-tab="formulas" onclick="switchTab('formulas',this)">📐 فارمولا · Formulas</button>
+      <div class="tab-group">Money</div>
+      <button class="tab-btn" type="button" data-tab="emi" onclick="switchTab('emi',this)"><span class="tab-ico" aria-hidden="true">🏠</span> EMI</button>
+      <button class="tab-btn" type="button" data-tab="zakat" onclick="switchTab('zakat',this)"><span class="tab-ico" aria-hidden="true">🕌</span> Zakat</button>
+      <button class="tab-btn" type="button" data-tab="gst" onclick="switchTab('gst',this)"><span class="tab-ico" aria-hidden="true">🧾</span> GST / Tax</button>
+      <button class="tab-btn" type="button" data-tab="gold" onclick="switchTab('gold',this)"><span class="tab-ico" aria-hidden="true">🪙</span> Gold value</button>
+      <div class="tab-group">Health</div>
+      <button class="tab-btn" type="button" data-tab="bmi" onclick="switchTab('bmi',this)"><span class="tab-ico" aria-hidden="true">⚖️</span> BMI</button>
+      <button class="tab-btn" type="button" data-tab="calorie" onclick="switchTab('calorie',this)"><span class="tab-ico" aria-hidden="true">🔥</span> Calories</button>
+      <button class="tab-btn" type="button" data-tab="water" onclick="switchTab('water',this)"><span class="tab-ico" aria-hidden="true">💧</span> Water</button>
+      <div class="tab-group">Fun</div>
+      <button class="tab-btn" type="button" data-tab="funny" onclick="switchTab('funny',this)"><span class="tab-ico" aria-hidden="true">😄</span> Funny calculator</button>
+      <div class="tab-group">Writing</div>
+      <a class="tab-btn" href="word-counter.html"><span class="tab-ico" aria-hidden="true">✍️</span> Word Counter</a>
+    </nav>
+
+    <main class="device" id="main">
+      <section id="sec-simple" class="calc-sec active">
+        <h2>Simple calculator</h2>
+        <input id="simple-display" class="display" type="text" value="0" readonly aria-label="Calculator display">
+        <div id="simple-preview" class="preview" aria-hidden="true"></div>
+        <div class="grid">
+          <button class="btn clear-key" onclick="clearDisp('simple')">AC</button><button class="btn fn" onclick="backspace('simple')" aria-label="Backspace">⌫</button><button class="btn fn" onclick="pressKey('simple','%')">%</button><button class="btn op" onclick="pressKey('simple','/')">÷</button>
+          <button class="btn" onclick="pressKey('simple','7')">7</button><button class="btn" onclick="pressKey('simple','8')">8</button><button class="btn" onclick="pressKey('simple','9')">9</button><button class="btn op" onclick="pressKey('simple','*')">×</button>
+          <button class="btn" onclick="pressKey('simple','4')">4</button><button class="btn" onclick="pressKey('simple','5')">5</button><button class="btn" onclick="pressKey('simple','6')">6</button><button class="btn op" onclick="pressKey('simple','-')">−</button>
+          <button class="btn" onclick="pressKey('simple','1')">1</button><button class="btn" onclick="pressKey('simple','2')">2</button><button class="btn" onclick="pressKey('simple','3')">3</button><button class="btn op" onclick="pressKey('simple','+')">+</button>
+          <button class="btn wide" onclick="pressKey('simple','0')">0</button><button class="btn" onclick="pressKey('simple','.')">.</button><button class="btn equals-key" onclick="calcResult('simple')">=</button>
+        </div>
+        <div id="simple-history" class="history-box"><h4>History</h4><div id="simple-history-list"></div></div>
+      </section>
+
+      <section id="sec-sci" class="calc-sec">
+        <h2>Scientific calculator</h2>
+        <input id="sci-display" class="display" type="text" value="0" readonly aria-label="Scientific calculator display">
+        <div class="grid">
+          <button class="btn fn" onclick="sciFunc('sin')">sin</button><button class="btn fn" onclick="sciFunc('cos')">cos</button><button class="btn fn" onclick="sciFunc('tan')">tan</button><button class="btn clear-key" onclick="clearDisp('sci')">C</button>
+          <button class="btn fn" onclick="sciFunc('sqrt')">√</button><button class="btn fn" onclick="sciFunc('sq')">x²</button><button class="btn fn" onclick="sciFunc('log')">log</button><button class="btn fn" onclick="backspace('sci')" aria-label="Backspace">⌫</button>
+          <button class="btn" onclick="pressKey('sci','7')">7</button><button class="btn" onclick="pressKey('sci','8')">8</button><button class="btn" onclick="pressKey('sci','9')">9</button><button class="btn op" onclick="pressKey('sci','/')">÷</button>
+          <button class="btn" onclick="pressKey('sci','4')">4</button><button class="btn" onclick="pressKey('sci','5')">5</button><button class="btn" onclick="pressKey('sci','6')">6</button><button class="btn op" onclick="pressKey('sci','*')">×</button>
+          <button class="btn" onclick="pressKey('sci','1')">1</button><button class="btn" onclick="pressKey('sci','2')">2</button><button class="btn" onclick="pressKey('sci','3')">3</button><button class="btn op" onclick="pressKey('sci','-')">−</button>
+          <button class="btn wide" onclick="pressKey('sci','0')">0</button><button class="btn" onclick="pressKey('sci','.')">.</button><button class="btn op" onclick="pressKey('sci','+')">+</button>
+          <button class="btn fn" onclick="pressKey('sci','(')">(</button><button class="btn fn" onclick="pressKey('sci',')')">)</button><button class="btn fn" onclick="pressKey('sci','**')">xʸ</button><button class="btn equals-key" onclick="calcResult('sci')">=</button>
+        </div>
+        <p class="note">Trigonometric functions use degrees. Use parentheses for grouped calculations.</p>
+        <div id="sci-history" class="history-box"><h4>History</h4><div id="sci-history-list"></div></div>
+      </section>
+
+      <section id="sec-age" class="calc-sec">
+        <h2>Age calculator</h2>
+        <div class="form">
+          <div class="input-group">
+            <label for="dob-text">Date of birth</label>
+            <div class="date-row">
+              <input type="text" id="dob-text" inputmode="numeric" autocomplete="bday" maxlength="10" placeholder="DD/MM/YYYY" oninput="onDobType(this)">
+              <button type="button" class="icon-btn" id="dob-edit-btn" onclick="editDob()" aria-label="Type date manually" title="Type date">✏️</button>
+              <button type="button" class="icon-btn" onclick="openCalendar()" aria-label="Open calendar" title="Open calendar">📅</button>
+              <input type="date" id="dob" class="dob-native" tabindex="-1" aria-hidden="true" onchange="onDobPick(this)">
+            </div>
+            <p class="note" style="margin-top:6px">Type the date (e.g. 15/08/1995), or tap the calendar to pick it.</p>
+          </div>
+          <button class="action-btn" onclick="calcAge()">Calculate age</button>
+          <div id="age-result" class="result" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="sec-bmi" class="calc-sec">
+        <h2>BMI calculator</h2>
+        <div class="form">
+          <div class="input-group"><label for="bmi-weight">Weight (kg)</label><input type="number" id="bmi-weight" min="1" step="any" placeholder="e.g. 70"></div>
+          <div class="input-group"><label for="bmi-height">Height (cm)</label><input type="number" id="bmi-height" min="1" step="any" placeholder="e.g. 175"></div>
+          <button class="action-btn" onclick="calcBMI()">Calculate BMI</button>
+          <div id="bmi-result" class="result" aria-live="polite"></div>
+        </div>
+        <p class="note"><a href="bmi-calculator.html">Full BMI guide and calculator page →</a></p>
+        <p class="note">BMI is a screening measure, not a medical diagnosis. Adult categories may not apply to children or teens.</p>
+      </section>
+
+      <section id="sec-emi" class="calc-sec">
+        <h2>Loan EMI calculator</h2>
+        <div class="form">
+          <div class="input-group"><label for="emi-amount">Loan amount</label><input type="number" id="emi-amount" min="0" step="any" placeholder="e.g. 100000"></div>
+          <div class="input-group"><label for="emi-rate">Annual interest rate (%)</label><input type="number" id="emi-rate" min="0" step="any" placeholder="e.g. 10"></div>
+          <div class="input-group"><label for="emi-years">Tenure (years)</label><input type="number" id="emi-years" min="0.01" step="any" placeholder="e.g. 2"></div>
+          <p class="note"><a href="emi-calculator.html">Full EMI guide and calculator page →</a></p>
+          <button class="action-btn" onclick="calcEMI()">Calculate EMI</button>
+          <div id="emi-result" class="result" aria-live="polite"></div>
+        </div>
+        <p class="note">Estimate only. Actual lender fees, taxes, and repayment terms may differ.</p>
+      </section>
+
+      <section id="sec-pct" class="calc-sec">
+        <h2>Percentage calculator</h2>
+        <div class="form">
+          <div class="input-group"><label for="pct-val">Percentage (%)</label><input type="number" id="pct-val" step="any" placeholder="e.g. 15"></div>
+          <div class="input-group"><label for="pct-total">Total amount</label><input type="number" id="pct-total" step="any" placeholder="e.g. 500"></div>
+          <button class="action-btn" onclick="calcPct()">Calculate percentage</button>
+          <div id="pct-result" class="result" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="sec-zakat" class="calc-sec">
+        <h2>Zakat calculator</h2>
+        <div class="form">
+          <div class="input-group"><label for="zakat-assets">Eligible zakatable wealth</label><input type="number" id="zakat-assets" min="0" step="any" placeholder="e.g. 200000"></div>
+          <button class="action-btn" onclick="calcZakat()">Calculate Zakat (2.5%)</button>
+          <div id="zakat-result" class="result" aria-live="polite"></div>
+        </div>
+        <p class="note"><a href="zakat-calculator.html">Full Zakat guide and nisab calculator →</a></p>
+        <p class="note">This is a simple 2.5% estimate, not a religious ruling. Nisab, eligible assets, liabilities, and the relevant lunar-year conditions may affect your obligation. Consult a qualified scholar for your circumstances.</p>
+      </section>
+
+      <section id="sec-discount" class="calc-sec">
+        <h2>Discount calculator</h2>
+        <div class="form">
+          <div class="input-group"><label for="disc-price">Original price</label><input type="number" id="disc-price" min="0" step="any" placeholder="e.g. 1000"></div>
+          <div class="input-group"><label for="disc-off">Discount (%)</label><input type="number" id="disc-off" min="0" max="100" step="any" placeholder="e.g. 20"></div>
+          <button class="action-btn" onclick="calcDiscount()">Calculate discount</button>
+          <div id="discount-result" class="result" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="sec-calorie" class="calc-sec">
+        <h2>Daily calorie calculator</h2>
+        <div class="form">
+          <div class="input-group"><label for="cal-weight">Weight (kg)</label><input type="number" id="cal-weight" min="1" step="any" placeholder="e.g. 70"></div>
+          <div class="input-group"><label for="cal-height">Height (cm)</label><input type="number" id="cal-height" min="1" step="any" placeholder="e.g. 175"></div>
+          <div class="input-group"><label for="cal-age">Age (years)</label><input type="number" id="cal-age" min="18" max="120" step="1" placeholder="e.g. 25"></div>
+          <div class="input-group"><label for="cal-sex">Formula setting</label><select id="cal-sex"><option value="male">Male equation</option><option value="female">Female equation</option></select></div>
+          <div class="input-group"><label for="cal-activity">Activity level</label><select id="cal-activity"><option value="1.2">Sedentary (little or no exercise)</option><option value="1.375">Light exercise (1–3 days/week)</option><option value="1.55">Moderate exercise (3–5 days/week)</option><option value="1.725">Very active (6–7 days/week)</option><option value="1.9">Extra active (very hard exercise/physical job)</option></select></div>
+          <button class="action-btn" onclick="calcCalories()">Estimate daily calories</button>
+          <div id="calorie-result" class="result" aria-live="polite"></div>
+        </div>
+        <p class="note">Uses the Mifflin–St Jeor equation to estimate maintenance calories for adults. This is not medical advice and may not fit every person.</p>
+      </section>
+
+      <section id="sec-water" class="calc-sec">
+        <h2>Water intake calculator</h2>
+        <div class="form">
+          <div class="input-group"><label for="water-weight">Weight (kg)</label><input type="number" id="water-weight" min="1" step="any" placeholder="e.g. 70"></div>
+          <button class="action-btn" onclick="calcWater()">Estimate water intake</button>
+          <div id="water-result" class="result" aria-live="polite"></div>
+        </div>
+        <p class="note">This is a rough guide only. Needs vary with climate, exercise, pregnancy, diet, and health conditions. Follow medical advice if you have fluid restrictions.</p>
+      </section>
+      <section id="sec-funny" class="calc-sec">
+        <h2>Funny calculator: Love compatibility</h2>
+        <div class="form">
+          <div class="input-group"><label for="funny-name1">Name of person 1</label><input type="text" id="funny-name1" maxlength="30" autocomplete="off" placeholder="e.g. Ali"></div>
+          <div class="input-group"><label for="funny-name2">Name of person 2</label><input type="text" id="funny-name2" maxlength="30" autocomplete="off" placeholder="e.g. Sara"></div>
+          <button class="action-btn" onclick="calcLove()">Check compatibility</button>
+          <div id="funny-result" class="result" aria-live="polite"></div>
+        </div>
+        <p class="note">Just for fun. The result is a playful number made from the names, not a real measure of love, a relationship or a future. Names are not saved or sent anywhere.</p>
+      </section>
+
+      <section id="sec-land" class="calc-sec">
+        <h2>Land area calculator</h2>
+        <div class="form">
+          <div class="input-group"><label for="land-val">Area</label><input type="number" id="land-val" min="0" step="any" placeholder="e.g. 10"></div>
+          <div class="input-group"><label for="land-from">Unit</label>
+            <select id="land-from"><option value="marla">Marla</option><option value="kanal">Kanal</option><option value="acre">Acre</option><option value="sqft">Square feet</option><option value="sqyd">Square yards (gaz)</option><option value="sqm">Square meters</option></select></div>
+          <div class="input-group"><label for="land-marla">Marla size</label>
+            <select id="land-marla"><option value="272.25">272.25 sq ft (standard)</option><option value="225">225 sq ft (some Lahore / Punjab schemes)</option></select></div>
+          <button class="action-btn" onclick="calcLand()">Convert area</button>
+          <div id="land-result" class="result" aria-live="polite"></div>
+        </div>
+        <p class="note">1 Kanal = 20 Marla. 1 Acre = 43,560 sq ft. Marla size differs by region and housing scheme, so check your property papers.</p>
+      </section>
+
+      <section id="sec-units" class="calc-sec">
+        <h2>Unit converter</h2>
+        <div class="form">
+          <div class="input-group"><label for="unit-cat">Type</label>
+            <select id="unit-cat" onchange="fillUnits()"><option value="length">Length</option><option value="weight">Weight</option><option value="temp">Temperature</option><option value="speed">Speed</option><option value="volume">Volume</option><option value="time">Time</option><option value="data">Data (digital storage)</option><option value="area">Area</option><option value="numeral">Numeral system</option></select></div>
+          <div class="input-group"><label for="unit-val">Value</label><input type="number" id="unit-val" step="any" placeholder="e.g. 5"></div>
+          <div class="input-group"><label for="unit-from">From</label><select id="unit-from"></select></div>
+          <div class="input-group"><label for="unit-to">To</label><select id="unit-to"></select></div>
+          <button class="action-btn" onclick="calcUnits()">Convert</button>
+          <div id="units-result" class="result" aria-live="polite"></div>
+        </div>
+        <p class="note">1 seer = 80 tola (about 933.1 g). 1 maund = 40 seer (about 37.32 kg).</p>
+      </section>
+
+      <section id="sec-gst" class="calc-sec">
+        <h2>GST / Tax calculator</h2>
+        <div class="form">
+          <div class="input-group"><label for="gst-amount">Amount</label><input type="number" id="gst-amount" min="0" step="any" placeholder="e.g. 10000"></div>
+          <div class="input-group"><label for="gst-rate">Tax rate (%)</label><input type="number" id="gst-rate" min="0" step="any" placeholder="e.g. 18"></div>
+          <div class="input-group"><label for="gst-mode">Amount is</label>
+            <select id="gst-mode"><option value="add">Without tax (add tax)</option><option value="remove">Including tax (remove tax)</option></select></div>
+          <button class="action-btn" onclick="calcGST()">Calculate tax</button>
+          <p class="note"><a href="gst-calculator.html">Full GST guide and calculator page →</a></p>
+          <div id="gst-result" class="result" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="sec-gold" class="calc-sec">
+        <h2>Gold value calculator</h2>
+        <div class="form">
+          <div class="input-group"><label for="gold-weight">Weight</label><input type="number" id="gold-weight" min="0" step="any" placeholder="e.g. 2.5"></div>
+          <div class="input-group"><label for="gold-unit">Weight unit</label>
+            <select id="gold-unit"><option value="tola">Tola</option><option value="gram">Gram</option><option value="masha">Masha</option><option value="ratti">Ratti</option></select></div>
+          <div class="input-group"><label for="gold-karat">Purity</label>
+            <select id="gold-karat"><option value="24">24K</option><option value="22">22K</option><option value="21">21K</option><option value="18">18K</option></select></div>
+          <div class="input-group"><label for="gold-price">Today's price of 1 tola (24K)</label><input type="number" id="gold-price" min="0" step="any" placeholder="Enter current market price"></div>
+          <button class="action-btn" onclick="calcGold()">Calculate value</button>
+          <div id="gold-result" class="result" aria-live="polite"></div>
+        </div>
+        <p class="note">1 tola = 11.6638 g, 1 tola = 12 masha, 1 masha = 8 ratti. Enter the current market rate yourself; jewellery making charges and wastage are not included.</p>
+      </section>
+
+      <section id="sec-formulas" class="calc-sec">
+        <h2>فارمولا · Math Formulas</h2>
+        <div class="f-tools">
+          <input type="search" id="formula-search" placeholder="Search formulas (e.g. circle, interest, sin)" oninput="filterFormulas()" aria-label="Search formulas">
+          <select id="formula-cat" onchange="filterFormulas()" aria-label="Formula category"></select>
+          <select id="formula-lang" onchange="applyFormulaLang()" aria-label="Description language / زبان"></select>
+        </div>
+        <p class="note" style="margin:0 0 14px">Tap a formula to open it, read its description in your language (🌐 = opens Google Translate), and solve your own question with the Solve button.</p>
+        <div id="formula-list"></div>
+        <p id="formula-empty" class="note" style="display:none">No formulas found. Try a different word.</p>
+      </section>
+    </main>
+  </div>
+</div>
+
+<section id="share" aria-label="Share Calculator10">
+  <h2 class="section-title">Share Calculator10</h2>
+  <div class="share-row" id="share-row"></div>
+</section>
+<section class="slider" id="reviews" aria-roledescription="carousel" aria-label="Customer feedback">
+  <div class="track" id="reviews-track"></div>
+</section>
+  <section class="slider" id="hero" aria-roledescription="carousel" aria-label="Highlights">
+    <div class="track">
+      <div class="slide"><h2>📐 35 math formulas, 24 languages</h2><p>Open the Formulas tab (فارمولا), read the explanation in your language and solve your own question on the spot.</p><button type="button" class="s-link" data-go="formulas">Open Formulas</button></div>
+      <div class="slide"><h2>📲 Install Calculator10</h2><p>Add it to your home screen. It opens like an app and keeps working without internet after the first visit.</p><button type="button" class="s-link" data-go="install">Install App</button></div>
+      <div class="slide"><h2>🧮 One place for everyday calculations</h2><p>Zakat, GST, EMI, BMI, gold, land area, unit converter, age and more, all free and private on your device.</p><button type="button" class="s-link" data-go="zakat">Try Zakat</button></div>
+      <div class="slide"><h2>🎤 Speak your sum</h2><p>On the Simple or Scientific calculator tap Speak and say, for example, "fifty plus one hundred". Pick a Classic, Golden, Dark or Pink skin from the top.</p><button type="button" class="s-link" data-go="simple">Open Calculator</button></div>
+    </div>
+  </section>
+<p class="note" style="text-align:center"><a href="word-counter.html">Word and character counter →</a> · <a href="zakat-calculator.html">Zakat guide</a></p>
+<footer>
+  <p>© <span id="year"></span> Calculator10. All rights reserved.</p>
+  <p><a href="privacy.html">Privacy Policy</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></p>
+</footer>
+
+<script>
+'use strict';
+const exprs = { simple: '', sci: '' };
+const historyData = { simple: [], sci: [] };
+let justCalculated = { simple: false, sci: false };
+let activeTab = 'simple';
+
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('dob').max = new Date().toISOString().slice(0,10);
+
+let lastLight = 'classic';
+function setSkin(name, noSave) {
+  const b = document.body;
+  b.classList.remove('dark-theme', 'skin-golden', 'skin-pink');
+  if (name === 'dark') b.classList.add('dark-theme');
+  else if (name === 'golden') b.classList.add('skin-golden');
+  else if (name === 'pink') b.classList.add('skin-pink');
+  if (name !== 'dark') lastLight = name;
+  const dark = name === 'dark', tb = document.getElementById('theme-btn');
+  tb.textContent = dark ? '☀️ Light' : '🌙 Dark';
+  tb.setAttribute('aria-pressed', String(dark));
+  const sel = document.getElementById('skin-select'); if (sel) sel.value = name;
+  if (!noSave) { try { localStorage.setItem('c10skin', name); } catch (e) { /* storage unavailable */ } }
+}
+(function () {
+  let sk = null;
+  try { sk = localStorage.getItem('c10skin'); } catch (e) { /* ignore */ }
+  if (!['classic', 'golden', 'dark', 'pink'].includes(sk)) sk = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'classic';
+  setSkin(sk, true);
+})();
+
+function toggleTheme() { setSkin(document.body.classList.contains('dark-theme') ? lastLight : 'dark'); }
+function switchTab(tab, button) {
+  activeTab = tab;
+  if (tab === 'formulas' && !window.__fbuilt) { window.__fbuilt = true; buildFormulas(); }
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    const on = b.dataset.tab === tab;
+    b.classList.toggle('active', on);
+    if (on) b.setAttribute('aria-current', 'page'); else b.removeAttribute('aria-current');
+  });
+  document.querySelectorAll('.calc-sec').forEach(s => s.classList.toggle('active', s.id === 'sec-' + tab));
+}
+function updateDisplay(type, value) {
+  document.getElementById(type + '-display').value = value || '0';
+}
+function pressKey(type, key) {
+  let current = exprs[type];
+  if (justCalculated[type] && /[0-9.(]/.test(key)) current = '';
+  justCalculated[type] = false;
+  if (key === '.') {
+    const lastNumber = current.split(/[+\-*/()%]/).pop();
+    if (lastNumber.includes('.')) return;
+  }
+  if (['+', '-', '*', '/', '**', '%'].includes(key)) {
+    if (!current && key !== '-') return;
+    if (/[+\-*/%]$/.test(current) && key !== '-') current = current.replace(/[+\-*/%]+$/, '');
+  }
+  exprs[type] = current + key;
+  updateDisplay(type, exprs[type]);
+  updatePreview(type);
+}
+function clearDisp(type) { exprs[type] = ''; justCalculated[type] = false; updateDisplay(type, '0'); updatePreview(type); }
+/* Live preview: shows the answer under the Simple display while typing. Display only: it is not saved to history and does not change the expression. */
+function updatePreview(type) {
+  const el = document.getElementById(type + '-preview'); if (!el) return;
+  el.textContent = '';
+  if (type !== 'simple' || justCalculated.simple) return;
+  const e = exprs.simple;
+  if (!e || /[+\-*/%(.]$/.test(e) || !/[+\-*/%]/.test(e.replace(/^-/, ''))) return;
+  try { el.textContent = '= ' + formatNumber(safeCalculate(e)); } catch (err) { /* incomplete or invalid: show nothing */ }
+}
+function backspace(type) { exprs[type] = exprs[type].slice(0,-1); justCalculated[type] = false; updateDisplay(type, exprs[type]); updatePreview(type); }
+function safeCalculate(expression) {
+  const expr = String(expression).replace(/\s+/g,'');
+  if (!expr || expr.length > 120) throw new Error('Enter a valid calculation.');
+  if (!/^[0-9+\-*/%.()]+$/.test(expr)) throw new Error('Invalid characters in calculation.');
+  if (/\/\s*0(?:\.0*)?(?![0-9.])/.test(expr)) throw new Error('Cannot divide by zero.');
+  // Parse arithmetic without eval: recursive descent parser.
+  let i = 0;
+  function number() {
+    let start = i;
+    if (expr[i] === '+' || expr[i] === '-') i++;
+    let digits = false;
+    while (i < expr.length && /[0-9.]/.test(expr[i])) { if (expr[i] >= '0' && expr[i] <= '9') digits = true; i++; }
+    if (!digits || (expr.slice(start,i).match(/\./g)||[]).length > 1) throw new Error('Invalid number.');
+    let n = Number(expr.slice(start,i));
+    if (!Number.isFinite(n)) throw new Error('Invalid number.');
+    return n;
+  }
+  function factor() {
+    let base;
+    if (expr[i] === '(') {
+      i++; base = sum();
+      if (expr[i] !== ')') throw new Error('Missing closing parenthesis.');
+      i++;
+    } else {
+      base = number();
+    }
+    if (expr.slice(i, i + 2) === '**') {
+      i += 2;
+      const exponent = factor();
+      base = Math.pow(base, exponent);
+      if (!Number.isFinite(base)) throw new Error('Result is outside the supported range.');
+    }
+    return base;
+  }
+  function term() {
+    let v = factor();
+    while (i < expr.length && (expr[i] === '*' || expr[i] === '/' || expr[i] === '%')) {
+      let op = expr[i++], rhs = factor();
+      if ((op === '/' || op === '%') && rhs === 0) throw new Error('Cannot divide by zero.');
+      v = op === '*' ? v*rhs : op === '/' ? v/rhs : v%rhs;
+    }
+    return v;
+  }
+  function sum() {
+    let v = term();
+    while (i < expr.length && (expr[i] === '+' || expr[i] === '-')) {
+      let op = expr[i++], rhs = term();
+      v = op === '+' ? v+rhs : v-rhs;
+    }
+    return v;
+  }
+  const result = sum();
+  if (i !== expr.length || !Number.isFinite(result)) throw new Error('Invalid calculation.');
+  return result;
+}
+function plain(n) { return Number(n.toPrecision(12)).toLocaleString('en-US', {useGrouping:false, maximumFractionDigits:20}); }
+function formatNumber(n) {
+  if (!Number.isFinite(n)) throw new Error('Result is outside the supported range.');
+  return Number(n.toPrecision(10)).toLocaleString('en-US', {maximumFractionDigits:8});
+}
+function addHistory(type, item) {
+  historyData[type].unshift(item);
+  if (historyData[type].length > 8) historyData[type].pop();
+  const list = document.getElementById(type + '-history-list');
+  list.replaceChildren();
+  historyData[type].forEach(entry => {
+    const div = document.createElement('div');
+    div.className = 'history-item';
+    div.textContent = entry;
+    list.appendChild(div);
+  });
+  document.getElementById(type + '-history').style.display = 'block';
+}
+function calcResult(type) {
+  try {
+    const currentExpr = exprs[type];
+    const result = safeCalculate(currentExpr);
+    const shown = formatNumber(result);
+    updateDisplay(type, shown);
+    const pv = document.getElementById(type + '-preview'); if (pv) pv.textContent = '';
+    exprs[type] = plain(result);
+    justCalculated[type] = true;
+    addHistory(type, currentExpr + ' = ' + shown);
+  } catch (err) {
+    updateDisplay(type, 'Error: ' + err.message);
+    exprs[type] = '';
+    justCalculated[type] = false;
+  }
+}
+function sciFunc(func) {
+  try {
+    const val = exprs.sci ? safeCalculate(exprs.sci) : 0;
+    let result, label;
+    if (func === 'sin') { result = Math.sin(val*Math.PI/180); label = `sin(${val}°)`; }
+    else if (func === 'cos') { result = Math.cos(val*Math.PI/180); label = `cos(${val}°)`; }
+    else if (func === 'tan') {
+      if (Math.abs(Math.cos(val*Math.PI/180)) < 1e-10) throw new Error('Tangent is undefined at this angle.');
+      result = Math.tan(val*Math.PI/180); label = `tan(${val}°)`;
+    }
+    else if (func === 'sqrt') { if (val < 0) throw new Error('Square root of a negative number is not real.'); result = Math.sqrt(val); label = `√(${val})`; }
+    else if (func === 'sq') { result = val*val; label = `(${val})²`; }
+    else if (func === 'log') { if (val <= 0) throw new Error('Log requires a number greater than zero.'); result = Math.log10(val); label = `log(${val})`; }
+    const shown = formatNumber(result);
+    exprs.sci = plain(result); updateDisplay('sci', shown); justCalculated.sci = true;
+    addHistory('sci', label + ' = ' + shown);
+  } catch (err) { updateDisplay('sci', 'Error: ' + err.message); exprs.sci = ''; justCalculated.sci = false; }
+}
+
+/* Keyboard support for the Simple and Scientific calculators */
+let kbNav = false;
+document.addEventListener('keydown', function (e) { if (e.key === 'Tab') kbNav = true; }, true);
+document.addEventListener('pointerdown', function () { kbNav = false; }, true);
+document.addEventListener('keydown', function (e) {
+  if (activeTab !== 'simple' && activeTab !== 'sci') return;
+  if (e.ctrlKey || e.metaKey || e.altKey) return;
+  const t = e.target;
+  if (t && (t.tagName === 'SELECT' || (t.tagName === 'INPUT' && !t.readOnly))) return;
+  /* Enter/Space on a button activates that button only when the user is moving through the page with the Tab key;
+     after a mouse/touch click, Enter means "calculate". */
+  if (t && t.tagName === 'BUTTON' && (e.key === ' ' || (e.key === 'Enter' && kbNav))) return;
+  const k = e.key;
+  if (/^[0-9]$/.test(k) || k === '.' || k === '(' || k === ')') { pressKey(activeTab, k); e.preventDefault(); }
+  else if (['+', '-', '*', '/', '%'].includes(k)) { pressKey(activeTab, k); e.preventDefault(); }
+  else if (k === 'Enter' || k === '=') { calcResult(activeTab); e.preventDefault(); }
+  else if (k === 'Backspace') { backspace(activeTab); e.preventDefault(); }
+  else if (k === 'Escape') { clearDisp(activeTab); }
+});
+
+function getNumber(id, label, min = -Infinity, max = Infinity) {
+  const raw = document.getElementById(id).value.trim();
+  if (raw === '') throw new Error('Please enter ' + label + '.');
+  const n = Number(raw);
+  if (!Number.isFinite(n) || n < min || n > max) throw new Error('Enter a valid ' + label + (Number.isFinite(min) ? ` (minimum ${min})` : '') + (Number.isFinite(max) ? ` (maximum ${max})` : '') + '.');
+  return n;
+}
+function showResult(id, html) {
+  /* Safe rendering: the only markup allowed is <br>; everything else is plain text (no innerHTML). */
+  const el = document.getElementById(id);
+  const lines = String(html).split('<br>');
+  el.replaceChildren();
+  lines.forEach((line, i) => {
+    if (i) el.appendChild(document.createElement('br'));
+    el.appendChild(document.createTextNode(line));
+  });
+  el.style.display = 'block';
+  addResultActions(el, lines.join('\n'));
+}
+function addResultActions(el, text) {
+  const bar = document.createElement('div'); bar.className = 'r-actions';
+  const status = document.createElement('span'); status.className = 'r-status'; status.setAttribute('role', 'status');
+  const say = msg => { status.textContent = msg; setTimeout(() => { status.textContent = ''; }, 2200); };
+  const mk = (label, aria, fn) => { const b = document.createElement('button'); b.type = 'button'; b.className = 'r-act'; b.textContent = label; b.setAttribute('aria-label', aria); b.addEventListener('click', fn); return b; };
+  bar.appendChild(mk('Copy', 'Copy result', async () => {
+    try { await navigator.clipboard.writeText(text); say('Copied ✓'); }
+    catch (e) {
+      try { const t = document.createElement('textarea'); t.value = text; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0'; document.body.appendChild(t); t.select(); const ok = document.execCommand('copy'); t.remove(); say(ok ? 'Copied ✓' : 'Copy not available'); }
+      catch (e2) { say('Copy not available'); }
+    }
+  }));
+  if (navigator.share) bar.appendChild(mk('Share', 'Share result', async () => {
+    try { await navigator.share({ title: 'Calculator10', text: text + '\n' + location.origin + '/' }); } catch (e) { /* user cancelled */ }
+  }));
+  bar.appendChild(status); el.appendChild(bar);
+}
+function showError(id, error) {
+  const el = document.getElementById(id);
+  el.textContent = error.message || 'Please check your input and try again.';
+  el.style.display = 'block';
+}
+function runCalc(resultId, fn) {
+  try { fn(); } catch (e) { showError(resultId, e); }
+}
+/* Date of birth: typed field + calendar picker + pencil (edit) button */
+function onDobType(el) {
+  const digits = el.value.replace(/\D/g, '').slice(0, 8);
+  let out = digits.slice(0, 2);
+  if (digits.length > 2) out += '/' + digits.slice(2, 4);
+  if (digits.length > 4) out += '/' + digits.slice(4);
+  el.value = out;
+  const iso = dobTextToISO(out);
+  document.getElementById('dob').value = iso || '';
+}
+function dobTextToISO(text) {
+  const m = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(text);
+  if (!m) return '';
+  const d = +m[1], mo = +m[2], y = +m[3];
+  const dt = new Date(y, mo - 1, d);
+  if (y < 1900 || dt.getFullYear() !== y || dt.getMonth() !== mo - 1 || dt.getDate() !== d) return '';
+  return m[3] + '-' + m[2] + '-' + m[1];
+}
+function onDobPick(el) {
+  if (!el.value) return;
+  const [y, m, d] = el.value.split('-');
+  document.getElementById('dob-text').value = d + '/' + m + '/' + y;
+}
+function editDob() {
+  const t = document.getElementById('dob-text');
+  t.focus();
+  t.select();
+}
+function openCalendar() {
+  const d = document.getElementById('dob');
+  try {
+    if (typeof d.showPicker === 'function') d.showPicker(); else { d.focus(); d.click(); }
+  } catch (e) { d.focus(); d.click(); }
+}
+function calcAge() {
+  runCalc('age-result', () => {
+    const typed = document.getElementById('dob-text').value.trim();
+    if (!typed) throw new Error('Please enter your date of birth.');
+    const value = dobTextToISO(typed);
+    if (!value) throw new Error('Enter a valid date as DD/MM/YYYY.');
+    const dob = new Date(value + 'T00:00:00');
+    const today = new Date(); today.setHours(0,0,0,0);
+    if (Number.isNaN(dob.getTime()) || dob > today) throw new Error('Date of birth cannot be in the future.');
+    let years = today.getFullYear() - dob.getFullYear();
+    let months = today.getMonth() - dob.getMonth();
+    let days = today.getDate() - dob.getDate();
+    if (days < 0) { months--; days += new Date(today.getFullYear(), today.getMonth(), 0).getDate(); }
+    if (months < 0) { years--; months += 12; }
+    const totalDays = Math.round((today - dob) / 86400000);
+    showResult('age-result', `Age: ${years} years, ${months} months, ${days} days<br>Total days: ${totalDays.toLocaleString()}<br>Total weeks: ${Math.floor(totalDays/7).toLocaleString()}`);
+  });
+}
+/* Funny calculator: a playful score made from the two names on this device only (nothing stored or sent). */
+function calcLove() {
+  runCalc('funny-result', () => {
+    const clean = v => String(v || '').trim().replace(/\s+/g, ' ');
+    const a = clean(document.getElementById('funny-name1').value), b = clean(document.getElementById('funny-name2').value);
+    if (!a || !b) throw new Error('Please enter both names.');
+    if (!/\p{L}/u.test(a) || !/\p{L}/u.test(b)) throw new Error('Names must contain letters.');
+    const key = [a.toLowerCase(), b.toLowerCase()].sort().join('|');   /* same result whichever order is typed */
+    let h = 0; for (const ch of key) h = (h * 31 + ch.codePointAt(0)) >>> 0;
+    const pct = 40 + (h % 60);                                           /* 40% to 99% */
+    const note = pct >= 85 ? 'Wow, a great match!' : pct >= 65 ? 'A good match, keep it going.' : 'Opposites can attract!';
+    showResult('funny-result', `Compatibility: ${pct}%<br>${note}`);
+  });
+}
+function calcBMI() {
+  runCalc('bmi-result', () => {
+    const w = getNumber('bmi-weight','weight',0.1,1000), h = getNumber('bmi-height','height',20,300)/100;
+    const bmi = w/(h*h);
+    const category = bmi < 18.5 ? 'Underweight' : bmi < 25 ? 'Normal weight' : bmi < 30 ? 'Overweight' : 'Obesity range';
+    showResult('bmi-result', `BMI: ${formatNumber(bmi)}<br>Category: ${category}`);
+  });
+}
+function calcEMI() {
+  runCalc('emi-result', () => {
+    const principal = getNumber('emi-amount','loan amount',0.01,1e15);
+    const annualRate = getNumber('emi-rate','annual interest rate',0,1000);
+    const years = getNumber('emi-years','tenure in years',0.01,100);
+    const months = Math.round(years*12);
+    if (months < 1) throw new Error('Tenure must be at least one month.');
+    const r = annualRate/1200;
+    const emi = r === 0 ? principal/months : principal*r*Math.pow(1+r,months)/(Math.pow(1+r,months)-1);
+    const total = emi*months;
+    const money = x => x.toLocaleString('en-US', { maximumFractionDigits: 2 });
+    showResult('emi-result', `Monthly EMI: ${money(emi)}<br>Total payment: ${money(total)}<br>Total interest: ${money(total-principal)}<br>Installments: ${months}`);
+  });
+}
+function calcPct() {
+  runCalc('pct-result', () => {
+    const pct = getNumber('pct-val','percentage',-1e9,1e9), total = getNumber('pct-total','total amount',-1e15,1e15);
+    showResult('pct-result', `${formatNumber(pct)}% of ${formatNumber(total)} = ${formatNumber(pct/100*total)}`);
+  });
+}
+function calcZakat() {
+  runCalc('zakat-result', () => {
+    const assets = getNumber('zakat-assets','eligible zakatable wealth',0,1e15);
+    showResult('zakat-result', `Estimated Zakat (2.5%): ${formatNumber(assets*0.025)}<br>Wealth entered: ${formatNumber(assets)}`);
+  });
+}
+function calcDiscount() {
+  runCalc('discount-result', () => {
+    const price = getNumber('disc-price','original price',0,1e15), pct = getNumber('disc-off','discount percentage',0,100);
+    const discount = price*pct/100;
+    showResult('discount-result', `Discount amount: ${formatNumber(discount)}<br>Final price: ${formatNumber(price-discount)}`);
+  });
+}
+function calcCalories() {
+  runCalc('calorie-result', () => {
+    const w = getNumber('cal-weight','weight',20,500), h = getNumber('cal-height','height',100,250), age = getNumber('cal-age','age',18,120);
+    const sex = document.getElementById('cal-sex').value;
+    const activity = Number(document.getElementById('cal-activity').value);
+    const bmr = 10*w + 6.25*h - 5*age + (sex === 'male' ? 5 : -161);
+    const calories = bmr*activity;
+    showResult('calorie-result', `Estimated BMR: ${formatNumber(bmr)} kcal/day<br>Estimated maintenance calories: ${formatNumber(calories)} kcal/day`);
+  });
+}
+function calcLand() {
+  runCalc('land-result', () => {
+    const v = getNumber('land-val','area',0,1e15);
+    const marla = Number(document.getElementById('land-marla').value);
+    const sqft = { marla: marla, kanal: marla*20, acre: 43560, sqft: 1, sqyd: 9, sqm: 10.7639104167 };
+    const names = { marla: 'Marla', kanal: 'Kanal', acre: 'Acre', sqft: 'Square feet', sqyd: 'Square yards (gaz)', sqm: 'Square meters' };
+    const from = document.getElementById('land-from').value;
+    const base = v * sqft[from];
+    const lines = Object.keys(sqft).filter(k => k !== from).map(k => `${names[k]}: ${formatNumber(base / sqft[k])}`);
+    showResult('land-result', `${formatNumber(v)} ${names[from]} =<br>` + lines.join('<br>'));
+  });
+}
+const UNIT_DATA = {
+  length: { mm:['Millimeter',0.001], cm:['Centimeter',0.01], m:['Meter',1], km:['Kilometer',1000], in:['Inch',0.0254], ft:['Foot',0.3048], yd:['Yard',0.9144], mi:['Mile',1609.344] },
+  weight: { g:['Gram',0.001], kg:['Kilogram',1], tola:['Tola',0.0116638], seer:['Seer',0.933105], maund:['Maund',37.3242], lb:['Pound',0.45359237], oz:['Ounce',0.028349523] },
+  temp: { c:['Celsius',0], f:['Fahrenheit',0], k:['Kelvin',0] },
+  speed: { kmh:['Kilometer/hour',1/3.6], ms:['Meter/second',1], mph:['Mile/hour',0.44704], kn:['Knot',1852/3600], fts:['Foot/second',0.3048] },
+  volume: { l:['Liter',1], ml:['Milliliter',0.001], m3:['Cubic meter',1000], gal:['US gallon',3.785411784], qt:['US quart',0.946352946], cup:['US cup',0.2365882365], floz:['US fluid ounce',0.0295735295625], tbsp:['US tablespoon',0.01478676478125], tsp:['US teaspoon',0.00492892159375] },
+  time: { s:['Second',1], min:['Minute',60], h:['Hour',3600], day:['Day',86400], week:['Week',604800], month:['Month (average, 30.44 days)',2629746], year:['Year (365.2425 days)',31556952], ms:['Millisecond',0.001] },
+  data: { B:['Byte (B)',1], bit:['Bit',0.125], KB:['Kilobyte (KB, 1000 B)',1e3], MB:['Megabyte (MB, 1000 KB)',1e6], GB:['Gigabyte (GB, 1000 MB)',1e9], TB:['Terabyte (TB, 1000 GB)',1e12], KiB:['Kibibyte (KiB, 1024 B)',1024], MiB:['Mebibyte (MiB, 1024 KiB)',1048576], GiB:['Gibibyte (GiB, 1024 MiB)',1073741824], TiB:['Tebibyte (TiB, 1024 GiB)',1099511627776] },
+  area: { sqm:['Square meter',1], sqft:['Square foot',0.09290304], sqyd:['Square yard',0.83612736], acre:['Acre',4046.8564224], ha:['Hectare',10000], sqkm:['Square kilometer',1e6], sqmi:['Square mile',2589988.110336], cm2:['Square centimeter',0.0001] },
+  numeral: { dec:['Decimal (base 10)',10], bin:['Binary (base 2)',2], oct:['Octal (base 8)',8], hex:['Hexadecimal (base 16)',16] }
+};
+function fmtUnit(n) { return (n !== 0 && Math.abs(n) < 1e-6) ? n.toExponential(6).replace(/\.?0+e/, 'e') : formatNumber(n); }
+function convertNumeral(raw, fromBase, toBase) {
+  let t = String(raw).trim().replace(/[\s_]/g, '').toLowerCase();
+  const pre = { 2: '0b', 8: '0o', 16: '0x' }[fromBase];
+  if (pre && t.startsWith(pre)) t = t.slice(2);
+  const ok = { 2: /^[01]+$/, 8: /^[0-7]+$/, 10: /^[0-9]+$/, 16: /^[0-9a-f]+$/ }[fromBase];
+  if (!t) throw new Error('Please enter a number.');
+  if (t.length > 64) throw new Error('Number is too long (maximum 64 digits).');
+  if (!ok.test(t)) throw new Error('Use only valid digits for the chosen system, whole non-negative numbers only.');
+  let n = 0n; const B = BigInt(fromBase);
+  for (const ch of t) n = n * B + BigInt(parseInt(ch, 16));
+  const out = n.toString(toBase);
+  return { shown: t, out: toBase === 16 ? out.toUpperCase() : out };
+}
+function fillUnits() {
+  const cat = document.getElementById('unit-cat').value;
+  const keys = Object.keys(UNIT_DATA[cat]);
+  ['unit-from','unit-to'].forEach((id, idx) => {
+    const sel = document.getElementById(id);
+    sel.replaceChildren();
+    keys.forEach(k => {
+      const o = document.createElement('option');
+      o.value = k; o.textContent = UNIT_DATA[cat][k][0];
+      sel.appendChild(o);
+    });
+    sel.selectedIndex = Math.min(idx, keys.length - 1);
+  });
+  const inp = document.getElementById('unit-val'), isNum = cat === 'numeral';
+  inp.value = '';
+  inp.type = isNum ? 'text' : 'number';
+  inp.setAttribute('inputmode', isNum ? 'text' : 'decimal');
+  inp.setAttribute('autocapitalize', 'off'); inp.setAttribute('autocomplete', 'off');
+  inp.placeholder = isNum ? 'e.g. 255, 1010 or FF' : 'e.g. 5';
+  if (isNum) inp.maxLength = 70; else inp.removeAttribute('maxlength');
+}
+function calcUnits() {
+  runCalc('units-result', () => {
+    const cat = document.getElementById('unit-cat').value;
+    const from = document.getElementById('unit-from').value, to = document.getElementById('unit-to').value;
+    if (cat === 'numeral') {
+      const r = convertNumeral(document.getElementById('unit-val').value, UNIT_DATA.numeral[from][1], UNIT_DATA.numeral[to][1]);
+      showResult('units-result', `${r.shown.toUpperCase()} (${UNIT_DATA.numeral[from][0]}) =<br>${r.out} (${UNIT_DATA.numeral[to][0]})`);
+      return;
+    }
+    const v = getNumber('unit-val','value',-1e15,1e15);
+    let result;
+    if (cat === 'temp') {
+      let c = from === 'c' ? v : from === 'f' ? (v - 32) * 5 / 9 : v - 273.15;
+      if (c < -273.15) throw new Error('Temperature cannot be below absolute zero.');
+      result = to === 'c' ? c : to === 'f' ? c * 9 / 5 + 32 : c + 273.15;
+    } else {
+      result = v * UNIT_DATA[cat][from][1] / UNIT_DATA[cat][to][1];
+    }
+    showResult('units-result', `${formatNumber(v)} ${UNIT_DATA[cat][from][0]} = ${fmtUnit(result)} ${UNIT_DATA[cat][to][0]}`);
+  });
+}
+function calcGST() {
+  runCalc('gst-result', () => {
+    const amount = getNumber('gst-amount','amount',0,1e15), rate = getNumber('gst-rate','tax rate',0,1000);
+    const mode = document.getElementById('gst-mode').value;
+    let net, tax, total;
+    if (mode === 'add') { net = amount; tax = amount * rate / 100; total = net + tax; }
+    else { total = amount; net = amount / (1 + rate / 100); tax = total - net; }
+    showResult('gst-result', `Amount without tax: ${formatNumber(net)}<br>Tax (${formatNumber(rate)}%): ${formatNumber(tax)}<br>Total with tax: ${formatNumber(total)}`);
+  });
+}
+function calcGold() {
+  runCalc('gold-result', () => {
+    const w = getNumber('gold-weight','weight',0,1e9), price = getNumber('gold-price','price per tola',0,1e15);
+    const unit = document.getElementById('gold-unit').value, karat = Number(document.getElementById('gold-karat').value);
+    const TOLA_G = 11.6638;
+    const tola = unit === 'tola' ? w : unit === 'gram' ? w / TOLA_G : unit === 'masha' ? w / 12 : w / 96;
+    const value = tola * price * karat / 24;
+    showResult('gold-result', `Weight: ${formatNumber(tola)} tola (${formatNumber(tola * TOLA_G)} g)<br>Purity: ${karat}K<br>Estimated value: ${formatNumber(value)}`);
+  });
+}
+fillUnits();
+function calcWater() {
+  runCalc('water-result', () => {
+    const w = getNumber('water-weight','weight',1,500);
+    const liters = w*0.035;
+    showResult('water-result', `Rough estimate: ${formatNumber(liters)} liters/day<br>Equivalent to about ${formatNumber(liters*1000)} mL/day`);
+  });
+}
+
+/* ===== Formulas (فارمولا) ===== */
+const LANGS=[['en','English'],['ur','اردو'],['hi','हिन्दी'],['ar','العربية'],['bn','বাংলা'],['pa','ਪੰਜਾਬੀ'],['fa','فارسی'],['ps','پښتو'],['sd','سنڌي'],['tr','Türkçe'],['fr','Français'],['es','Español'],['de','Deutsch'],['pt','Português'],['ru','Русский'],['id','Bahasa Indonesia'],['ms','Bahasa Melayu'],['zh-CN','中文'],['ja','日本語'],['ko','한국어'],['it','Italiano'],['sw','Kiswahili'],['ta','தமிழ்'],['gu','ગુજરાતી']];
+const BUILT={en:0,ur:1,hi:2,ar:3};
+const RTL=['ur','ar','fa','ps','sd'];
+const CATS={geo:['Geometry','جیومیٹری'],alg:['Algebra','الجبرا'],trig:['Trigonometry','مثلثیات'],num:['Numbers','اعداد'],fin:['Finance & Percent','مالیات و فیصد'],stat:['Statistics & Probability','شماریات و امکان']};
+const PI=Math.PI, SQ=Math.sqrt, F=formatNumber;
+const nn=x=>Number(x.toFixed(10));
+const needInt=(...a)=>{ if(a.some(x=>!Number.isInteger(x))) throw new Error('Enter whole numbers.'); };
+const fact=n=>{ needInt(n); if(n>170) throw new Error('Number too large (max 170).'); let r=1; for(let i=2;i<=n;i++) r*=i; return r; };
+const gcd=(a,b)=>b?gcd(b,a%b):a;
+const FD=[
+['geo','Circle area','دائرے کا رقبہ','A = π r²',['Radius r'],([r])=>'Area = '+F(PI*r*r),
+ 'Used for land, pipes, wheels and design.|زمین، پائپ، پہیوں اور ڈیزائن میں استعمال ہوتا ہے۔',
+ 'Area inside a circle of radius r (π ≈ 3.14159).|رداس r والے دائرے کے اندر کا رقبہ (π ≈ 3.14159)۔|त्रिज्या r वाले वृत्त का क्षेत्रफल (π ≈ 3.14159)।|مساحة الدائرة التي نصف قطرها r (π ≈ 3.14159).'],
+['geo','Circle circumference','دائرے کا گھیر','C = 2 π r',['Radius r'],([r])=>'Circumference = '+F(2*PI*r),
+ 'Length of any round boundary: tracks, belts, fences.|گول حد کی لمبائی: ٹریک، بیلٹ، باڑ۔',
+ 'Distance around a circle.|دائرے کے گرد پوری لمبائی۔|वृत्त की परिधि, यानी उसके चारों ओर की दूरी।|المحيط: المسافة حول الدائرة.'],
+['geo','Rectangle area','مستطیل کا رقبہ','A = l × w',['Length l','Width w'],([l,w])=>'Area = '+F(l*w)+'\nPerimeter = '+F(2*(l+w)),
+ 'Most common formula: rooms, plots, floors, screens.|کمرے، پلاٹ، فرش اور اسکرین کا رقبہ۔',
+ 'Area is length times width; perimeter is 2(l + w).|رقبہ = لمبائی × چوڑائی؛ گھیر = 2(l + w)۔|क्षेत्रफल = लंबाई × चौड़ाई; परिमाप = 2(l + w)।|المساحة = الطول × العرض، والمحيط = 2(l + w).'],
+['geo','Triangle area','تکون کا رقبہ','A = ½ × b × h',['Base b','Height h'],([b,h])=>'Area = '+F(b*h/2),
+ 'Base for roof, land and structural calculations.|چھت، زمین اور تعمیراتی حساب کی بنیاد۔',
+ 'Half of base times perpendicular height.|بنیاد اور عمودی اونچائی کے حاصل ضرب کا آدھا۔|आधार × लंब ऊँचाई का आधा।|نصف حاصل ضرب القاعدة في الارتفاع.'],
+['geo',"Heron's formula (triangle from 3 sides)",'ہیرون کا فارمولا (تین اطراف سے رقبہ)','s=(a+b+c)/2, A=√(s(s−a)(s−b)(s−c))',['Side a','Side b','Side c'],([a,b,c])=>{ if(a+b<=c||a+c<=b||b+c<=a) throw new Error('These sides cannot form a triangle.'); const s=(a+b+c)/2; return 'Area = '+F(SQ(s*(s-a)*(s-b)*(s-c))); },
+ 'Finds area when height is unknown, e.g. plots.|جب اونچائی معلوم نہ ہو تب رقبہ نکالتا ہے۔',
+ 'Area of a triangle from its three sides only.|صرف تین اطراف سے تکون کا رقبہ۔|केवल तीन भुजाओं से त्रिभुज का क्षेत्रफल।|مساحة المثلث من أضلاعه الثلاثة فقط.'],
+['geo','Pythagorean theorem','فیثاغورث کا مسئلہ','c² = a² + b²',['Side a','Side b'],([a,b])=>'Hypotenuse c = '+F(SQ(a*a+b*b)),
+ 'Foundation of geometry, construction and distance.|جیومیٹری، تعمیرات اور فاصلے کی بنیاد۔',
+ 'In a right triangle, the square of the longest side equals the sum of squares of the other two.|قائمہ الزاویہ تکون میں سب سے لمبے ضلع کا مربع باقی دو کے مربعوں کے مجموعے کے برابر ہوتا ہے۔|समकोण त्रिभुज में कर्ण का वर्ग अन्य दो भुजाओं के वर्गों के योग के बराबर होता है।|في المثلث القائم مربع الوتر يساوي مجموع مربعي الضلعين الآخرين.'],
+['geo','Trapezoid area','ذوزنقہ کا رقبہ','A = ½ (a + b) h',['Parallel side a','Parallel side b','Height h'],([a,b,h])=>'Area = '+F((a+b)*h/2),
+ 'Used for irregular plots and cross-sections.|بے ترتیب پلاٹ اور کٹاؤ کے رقبے میں۔',
+ 'Average of the two parallel sides times height.|دو متوازی اطراف کی اوسط ضرب اونچائی۔|दो समांतर भुजाओं का औसत × ऊँचाई।|متوسط الضلعين المتوازيين × الارتفاع.'],
+['geo','Sphere volume','کرے کا حجم','V = 4/3 π r³',['Radius r'],([r])=>'Volume = '+F(4/3*PI*r**3)+'\nSurface area = '+F(4*PI*r*r),
+ 'Tanks, balls, planets and bubbles.|ٹینک، گیند، سیارے اور بلبلے۔',
+ 'Space inside a sphere; surface area is 4πr².|کرے کے اندر کی جگہ؛ سطحی رقبہ 4πr²۔|गोले के अंदर का आयतन; पृष्ठीय क्षेत्रफल 4πr²।|حجم الكرة؛ ومساحة سطحها 4πr².'],
+['geo','Cylinder volume','بیلن کا حجم','V = π r² h',['Radius r','Height h'],([r,h])=>'Volume = '+F(PI*r*r*h),
+ 'Water tanks, pipes, cans and drums.|پانی کی ٹینکی، پائپ، ڈبے اور ڈرم۔',
+ 'Base circle area times height.|قاعدے کے دائرے کا رقبہ ضرب اونچائی۔|आधार वृत्त का क्षेत्रफल × ऊँचाई।|مساحة القاعدة الدائرية × الارتفاع.'],
+['geo','Cone volume','مخروط کا حجم','V = ⅓ π r² h',['Radius r','Height h'],([r,h])=>'Volume = '+F(PI*r*r*h/3),
+ 'Funnels, heaps of grain or sand, tents.|فنل، اناج یا ریت کے ڈھیر، خیمے۔',
+ 'One third of the matching cylinder.|اسی ناپ کے بیلن کا ایک تہائی۔|समान बेलन का एक-तिहाई।|ثلث حجم الأسطوانة المماثلة.'],
+['alg','Quadratic formula','دو درجی مساوات کا فارمولا','x = (−b ± √(b²−4ac)) / 2a',['±a','±b','±c'],([a,b,c])=>{ if(a===0) throw new Error('a cannot be 0.'); const D=b*b-4*a*c; if(D>=0) return 'x₁ = '+F((-b+SQ(D))/(2*a))+'\nx₂ = '+F((-b-SQ(D))/(2*a)); const re=F(-b/(2*a)), im=F(SQ(-D)/(2*Math.abs(a))); return 'No real roots.\nx = '+re+' ± '+im+'i'; },
+ 'Solves ax² + bx + c = 0; key to algebra and physics.|ax² + bx + c = 0 حل کرتا ہے؛ الجبرا اور طبیعیات میں بنیادی۔',
+ 'Gives the roots of a quadratic equation using the discriminant D = b² − 4ac.|ڈسکرمیننٹ D = b² − 4ac سے دو درجی مساوات کے جذر نکالتا ہے۔|विविक्तकर D = b² − 4ac से द्विघात समीकरण के मूल निकालता है।|يوجد جذور المعادلة التربيعية باستخدام المميز D = b² − 4ac.'],
+['alg','Slope of a line','خط کی ڈھلوان','m = (y₂ − y₁) / (x₂ − x₁)',['±x₁','±y₁','±x₂','±y₂'],([x1,y1,x2,y2])=>{ if(x1===x2) throw new Error('Vertical line: slope is undefined.'); return 'Slope m = '+F((y2-y1)/(x2-x1)); },
+ 'Measures steepness; used in graphs, roads, rates.|ڈھلوان ناپتا ہے؛ گراف، سڑکوں اور شرحوں میں۔',
+ 'Rise divided by run between two points.|دو نقطوں کے درمیان اٹھان بالمقابل پھیلاؤ۔|दो बिंदुओं के बीच उठान ÷ दूरी।|الصعود مقسومًا على الامتداد بين نقطتين.'],
+['alg','Distance between two points','دو نقطوں کا فاصلہ','d = √((x₂−x₁)² + (y₂−y₁)²)',['±x₁','±y₁','±x₂','±y₂'],([x1,y1,x2,y2])=>'Distance = '+F(SQ((x2-x1)**2+(y2-y1)**2)),
+ 'Maps, games, physics and navigation.|نقشوں، گیمز، طبیعیات اور نیویگیشن میں۔',
+ 'Pythagoras applied to coordinates.|فیثاغورث کا مسئلہ نقاط پر لاگو۔|निर्देशांकों पर पाइथागोरस प्रमेय।|نظرية فيثاغورس مطبقة على الإحداثيات.'],
+['alg','Arithmetic sequence (nth term & sum)','حسابی تسلسل','aₙ = a + (n−1)d,  S = n/2 (2a + (n−1)d)',['±First term a','±Common difference d','Number of terms n'],([a,d,n])=>{ needInt(n); if(n<1) throw new Error('n must be at least 1.'); return 'nth term = '+F(a+(n-1)*d)+'\nSum = '+F(n/2*(2*a+(n-1)*d)); },
+ 'Savings plans, installments, patterns.|بچت، اقساط اور پیٹرن۔',
+ 'A sequence that grows by the same amount d each step.|ایسا تسلسل جو ہر قدم پر یکساں مقدار d سے بڑھتا ہے۔|ऐसा क्रम जो हर चरण में समान मात्रा d से बढ़ता है।|متتابعة تزداد بمقدار ثابت d في كل خطوة.'],
+['alg','Geometric sequence (nth term & sum)','ہندسی تسلسل','aₙ = a·rⁿ⁻¹,  S = a(1−rⁿ)/(1−r)',['±First term a','±Ratio r','Number of terms n'],([a,r,n])=>{ needInt(n); if(n<1) throw new Error('n must be at least 1.'); const s=r===1?a*n:a*(1-r**n)/(1-r); return 'nth term = '+F(a*r**(n-1))+'\nSum = '+F(s); },
+ 'Growth, compound effects, population models.|بڑھوتری، مرکب اثرات اور آبادی کے ماڈل۔',
+ 'A sequence where each term is multiplied by the same ratio r.|ایسا تسلسل جس کا ہر جز ایک ہی نسبت r سے ضرب ہوتا ہے۔|ऐसा क्रम जिसमें हर पद को समान अनुपात r से गुणा किया जाता है।|متتابعة يُضرب كل حد فيها بنفس النسبة r.'],
+['trig','Sine, cosine, tangent','سائن، کوسائن، ٹینجنٹ','sin θ = opp/hyp, cos θ = adj/hyp, tan θ = opp/adj',['±Angle θ (degrees)'],([t])=>{ const r=t*PI/180; const tn=Math.abs(Math.cos(r))<1e-10?'undefined':F(nn(Math.tan(r))); return 'sin = '+F(nn(Math.sin(r)))+'\ncos = '+F(nn(Math.cos(r)))+'\ntan = '+tn; },
+ 'Heights, distances, waves, engineering.|اونچائی، فاصلے، لہریں اور انجینئرنگ۔',
+ 'Ratios of sides in a right triangle for an angle θ.|زاویہ θ کے لیے قائمہ تکون کے اطراف کی نسبتیں۔|कोण θ के लिए समकोण त्रिभुज की भुजाओं के अनुपात।|نسب أضلاع المثلث القائم للزاوية θ.'],
+['trig','Law of cosines','قانونِ کوسائن','c² = a² + b² − 2ab cos C',['Side a','Side b','Angle C (degrees, 0–180)'],([a,b,C])=>{ if(C>180) throw new Error('Angle must be 0–180.'); return 'Side c = '+F(SQ(a*a+b*b-2*a*b*Math.cos(C*PI/180))); },
+ 'Surveying and any triangle that is not right-angled.|سروے اور غیر قائمہ تکون کے لیے۔',
+ 'Generalised Pythagoras for any triangle.|کسی بھی تکون کے لیے عمومی فیثاغورث۔|किसी भी त्रिभुज के लिए सामान्यीकृत पाइथागोरस।|تعميم لنظرية فيثاغورس على أي مثلث.'],
+['num','Factorial, permutation, combination','فیکٹوریل، ترتیب، ترکیب','n!,  nPr = n!/(n−r)!,  nCr = n!/(r!(n−r)!)',['Total n','Chosen r'],([n,r])=>{ needInt(n,r); if(r>n) throw new Error('r cannot be greater than n.'); return 'n! = '+F(fact(n))+'\nnPr = '+F(fact(n)/fact(n-r))+'\nnCr = '+F(fact(n)/(fact(r)*fact(n-r))); },
+ 'Counting arrangements, teams, lotteries, probability.|ترتیبیں، ٹیمیں، قرعہ اندازی اور امکان گننے میں۔',
+ 'Counts ordered (nPr) and unordered (nCr) selections.|ترتیب کے ساتھ (nPr) اور بغیر ترتیب (nCr) انتخاب گنتا ہے۔|क्रम सहित (nPr) और क्रम रहित (nCr) चयन गिनता है।|يحسب الاختيارات المرتبة (nPr) وغير المرتبة (nCr).'],
+['num','GCD and LCM','عادِ اعظم اور اقلِ مضاعف (GCD / LCM)','LCM = (a × b) / GCD',['Number a','Number b'],([a,b])=>{ needInt(a,b); if(a<1||b<1) throw new Error('Enter numbers of 1 or more.'); const g=gcd(a,b); return 'GCD = '+F(g)+'\nLCM = '+F(a/g*b); },
+ 'Simplifying fractions, scheduling, ratios.|کسر آسان کرنا، شیڈول اور تناسب۔',
+ 'Greatest common divisor and least common multiple.|عادِ اعظم اور اقلِ مضاعف۔|महत्तम समापवर्तक और लघुत्तम समापवर्त्य।|القاسم المشترك الأكبر والمضاعف المشترك الأصغر.'],
+['num','Logarithm','لوگارتھم','log_b(x) = ln x / ln b',['x (greater than 0)','Base b (greater than 0, not 1)'],([x,b])=>{ if(x<=0||b<=0||b===1) throw new Error('x > 0 and base > 0 (not 1) required.'); return 'log_b(x) = '+F(Math.log(x)/Math.log(b)); },
+ 'Earthquake, sound and pH scales; growth time.|زلزلے، آواز اور pH کے پیمانے؛ بڑھوتری کا وقت۔',
+ 'The power to which b must be raised to get x.|وہ طاقت جس پر b کو لے جانے سے x ملے۔|वह घात जिस पर b को उठाने से x मिले।|الأس الذي يُرفع إليه b للحصول على x.'],
+['fin','Percentage change','فیصد تبدیلی','% = (new − old) / old × 100',['Old value','New value'],([o,n])=>{ if(o===0) throw new Error('Old value cannot be 0.'); const c=(n-o)/o*100; return (c>=0?'Increase: ':'Decrease: ')+F(Math.abs(c))+'%'; },
+ 'Prices, salaries, marks and growth.|قیمتوں، تنخواہوں، نمبروں اور ترقی میں۔',
+ 'How much a value rose or fell compared with the original.|اصل قدر کے مقابلے میں اضافہ یا کمی کتنی ہوئی۔|मूल मान की तुलना में कितनी बढ़ोतरी या कमी हुई।|مقدار الزيادة أو النقصان مقارنة بالقيمة الأصلية.'],
+['fin','Simple interest','سادہ منافع','I = P × R × T / 100',['Principal P','Rate R (% per year)','Time T (years)'],([P,R,T])=>'Interest = '+F(P*R*T/100)+'\nTotal = '+F(P+P*R*T/100),
+ 'Basic loans and deposits.|بنیادی قرض اور ڈپازٹ۔',
+ 'Interest earned on the original amount only.|صرف اصل رقم پر ملنے والا منافع۔|केवल मूल राशि पर मिलने वाला ब्याज।|الفائدة على المبلغ الأصلي فقط.'],
+['fin','Compound interest','مرکب منافع','A = P (1 + r/n)^(nt)',['Principal P','Annual rate (%)','Times per year n','Years t'],([P,r,n,t])=>{ if(n<1) throw new Error('n must be at least 1.'); const A=P*(1+r/100/n)**(n*t); return 'Final amount = '+F(A)+'\nInterest = '+F(A-P); },
+ 'Savings, investments and loans that grow on interest.|بچت، سرمایہ کاری اور منافع پر منافع والے قرض۔',
+ 'Interest is added to the principal and earns interest again.|منافع اصل میں شامل ہو کر دوبارہ منافع کماتا ہے۔|ब्याज मूलधन में जुड़कर फिर ब्याज कमाता है।|تُضاف الفائدة إلى الأصل فتُكسب فائدة من جديد.'],
+['fin','Profit / loss percent','نفع / نقصان فیصد','% = (selling − cost) / cost × 100',['Cost price','Selling price'],([c,s])=>{ if(c===0) throw new Error('Cost price cannot be 0.'); const p=s-c; return (p>=0?'Profit: ':'Loss: ')+F(Math.abs(p))+' ('+F(Math.abs(p/c*100))+'%)'; },
+ 'Essential for shops and business.|دکان اور کاروبار کے لیے ضروری۔',
+ 'Compares selling price with cost price.|فروخت کی قیمت کا لاگت سے موازنہ۔|विक्रय मूल्य की लागत से तुलना।|مقارنة سعر البيع بسعر التكلفة.'],
+['stat','Mean, median, range','اوسط، وسطانیہ، دائرہ','mean = Σx / n',['~Numbers (comma separated)'],([a])=>{ const s=[...a].sort((x,y)=>x-y), n=s.length, m=n%2?s[(n-1)/2]:(s[n/2-1]+s[n/2])/2; return 'Count = '+n+'\nMean = '+F(a.reduce((x,y)=>x+y,0)/n)+'\nMedian = '+F(m)+'\nRange = '+F(s[n-1]-s[0]); },
+ 'Summarises marks, prices and surveys.|نمبروں، قیمتوں اور سروے کا خلاصہ۔',
+ 'Centre and spread of a data set.|ڈیٹا کا مرکز اور پھیلاؤ۔|डेटा का केंद्र और फैलाव।|مركز البيانات ومدى انتشارها.'],
+['stat','Standard deviation','معیاری انحراف','σ = √(Σ(x−mean)² / n)',['~Numbers (comma separated)'],([a])=>{ const n=a.length, m=a.reduce((x,y)=>x+y,0)/n, ss=a.reduce((x,y)=>x+(y-m)**2,0); return 'Population σ = '+F(SQ(ss/n))+(n>1?'\nSample s = '+F(SQ(ss/(n-1))):''); },
+ 'Measures risk and consistency in data.|ڈیٹا میں خطرے اور یکسانیت کی پیمائش۔',
+ 'How far values typically lie from the mean.|اقدار عموماً اوسط سے کتنی دور ہوتی ہیں۔|मान आम तौर पर औसत से कितने दूर होते हैं।|المسافة المعتادة للقيم عن المتوسط.'],
+['stat','Probability','امکان','P = favourable / total',['Favourable outcomes','Total outcomes'],([f,t])=>{ if(t===0||f>t) throw new Error('Total must be above 0 and not less than favourable.'); return 'P = '+F(f/t)+'\nPercent = '+F(f/t*100)+'%'; },
+ 'Games, insurance, weather and decisions.|کھیل، انشورنس، موسم اور فیصلے۔',
+ 'Chance of an event happening, from 0 to 1.|کسی واقعے کے ہونے کا امکان، 0 سے 1 تک۔|किसी घटना के होने की संभावना, 0 से 1 तक।|احتمال وقوع حدث، من 0 إلى 1.'],
+['geo','Polygon angles','کثیر الاضلاع کے زاویے','Sum = (n−2) × 180°',['Number of sides n (3 or more)'],([n])=>{ needInt(n); if(n<3) throw new Error('n must be 3 or more.'); return 'Interior angle sum = '+F((n-2)*180)+'°\nEach angle (regular) = '+F((n-2)*180/n)+'°\nEach exterior angle = '+F(360/n)+'°'; },
+ 'Used in design, tiling, architecture and maps.|ڈیزائن، ٹائلنگ، فن تعمیر اور نقشوں میں۔',
+ 'Interior angles of any n-sided polygon add up to (n−2)×180°.|n اطراف والے کثیر الاضلاع کے اندرونی زاویوں کا مجموعہ (n−2)×180° ہوتا ہے۔|n भुजाओं वाले बहुभुज के आंतरिक कोणों का योग (n−2)×180° होता है।|مجموع الزوايا الداخلية لمضلع ذي n ضلعًا يساوي (n−2)×180°.'],
+['num','Logarithm laws','لوگارتھم کے قوانین','log(ab) = log a + log b',['a (greater than 0)','b (greater than 0)'],([a,b])=>{ if(a<=0||b<=0) throw new Error('a and b must be greater than 0.'); const L=Math.log10; return 'log a = '+F(L(a))+'\nlog b = '+F(L(b))+'\nlog a + log b = '+F(L(a)+L(b))+'\nlog(ab) = '+F(L(a*b)); },
+ 'Turns multiplication into addition; basis of slide rules and scales.|ضرب کو جمع میں بدلتا ہے؛ پیمانوں اور حساب کی بنیاد۔',
+ 'The log of a product equals the sum of the logs.|حاصل ضرب کا لوگارتھم لوگارتھموں کے مجموعے کے برابر ہوتا ہے۔|गुणनफल का लघुगणक लघुगणकों के योग के बराबर होता है।|لوغاريتم الضرب يساوي مجموع اللوغاريتمين.'],
+['num','Prime check and factors','ابتدائی عدد اور اجزائے ضربی','n = p₁ × p₂ × …',['Whole number n (2 or more)'],([n])=>{ needInt(n); if(n<2||n>1e12) throw new Error('Enter a whole number from 2 to 1,000,000,000,000.'); let m=n,f=[]; for(let d=2;d*d<=m;d++){ while(m%d===0){ f.push(d); m/=d; } } if(m>1) f.push(m); return f.length===1?F(n)+' is a prime number.':F(n)+' is not prime.\nPrime factors: '+f.join(' × '); },
+ 'Basis of cryptography, fractions and number theory.|خفیہ نگاری، کسر اور نمبر تھیوری کی بنیاد۔',
+ 'A prime has exactly two divisors: 1 and itself.|ابتدائی عدد کے صرف دو مقسوم ہوتے ہیں: 1 اور وہ خود۔|अभाज्य संख्या के केवल दो भाजक होते हैं: 1 और वह स्वयं।|العدد الأولي له قاسمان فقط: 1 ونفسه.'],
+['num','Sum of first n numbers','پہلے n اعداد کا مجموعہ','1+2+…+n = n(n+1)/2',['Whole number n (1 or more)'],([n])=>{ needInt(n); if(n<1) throw new Error('n must be 1 or more.'); return 'Sum of 1 to n = '+F(n*(n+1)/2)+'\nSum of squares = '+F(n*(n+1)*(2*n+1)/6)+'\nSum of cubes = '+F((n*(n+1)/2)**2); },
+ 'Quick totals, series and programming loops.|فوری مجموعے، سیریز اور پروگرامنگ لوپ۔',
+ 'Shortcut for adding consecutive natural numbers, squares and cubes.|مسلسل قدرتی اعداد، ان کے مربعوں اور مکعبوں کو جمع کرنے کا شارٹ کٹ۔|क्रमागत प्राकृतिक संख्याओं, उनके वर्गों और घनों को जोड़ने का शॉर्टकट।|اختصار لجمع الأعداد الطبيعية المتتالية ومربعاتها ومكعباتها.'],
+['alg','Exponent laws','قوتِ نما کے قوانین','aᵐ × aⁿ = aᵐ⁺ⁿ,  aᵐ ÷ aⁿ = aᵐ⁻ⁿ',['±Base a (not 0)','±Power m','±Power n'],([a,m,n])=>{ if(a===0) throw new Error('a cannot be 0.'); return 'aᵐ × aⁿ = a^'+F(m+n)+' = '+F(a**(m+n))+'\naᵐ ÷ aⁿ = a^'+F(m-n)+' = '+F(a**(m-n)); },
+ 'Science notation, growth and computing sizes.|سائنسی نوٹیشن، بڑھوتری اور کمپیوٹر کے سائز۔',
+ 'Same base: add powers when multiplying, subtract when dividing.|ایک ہی بیس: ضرب میں طاقتیں جمع، تقسیم میں تفریق۔|समान आधार: गुणा में घात जोड़ें, भाग में घटाएँ।|الأساس نفسه: تُجمع الأسس عند الضرب وتُطرح عند القسمة.'],
+['geo','Ellipse area','بیضوی کا رقبہ','A = π a b',['Semi-axis a','Semi-axis b'],([a,b])=>'Area = '+F(PI*a*b),
+ 'Orbits, lenses, gardens and tracks.|مدار، عدسے، باغات اور ٹریک۔',
+ 'Area of an ellipse from its two half-axes.|بیضوی کا رقبہ اس کے دو نصف محوروں سے۔|दीर्घवृत्त का क्षेत्रफल उसके दो अर्ध-अक्षों से।|مساحة القطع الناقص من نصفي محوريه.'],
+['geo','Cuboid volume and surface','مکعب نما کا حجم اور سطح','V = l w h,  S = 2(lw + lh + wh)',['Length l','Width w','Height h'],([l,w,h])=>'Volume = '+F(l*w*h)+'\nSurface area = '+F(2*(l*w+l*h+w*h))+'\nDiagonal = '+F(SQ(l*l+w*w+h*h)),
+ 'Rooms, boxes, tanks and packing.|کمرے، ڈبے، ٹینک اور پیکنگ۔',
+ 'Space inside a box and the area of all its faces.|ڈبے کے اندر کی جگہ اور اس کے تمام رخوں کا رقبہ۔|डिब्बे के अंदर की जगह और उसके सभी फलकों का क्षेत्रफल।|حجم الصندوق ومساحة جميع أوجهه.'],
+['alg','Square of a sum / difference','مجموعے / فرق کا مربع','(a+b)² = a² + 2ab + b²',['±a','±b'],([a,b])=>'(a+b)² = '+F((a+b)**2)+'\na² + 2ab + b² = '+F(a*a+2*a*b+b*b)+'\n(a−b)² = '+F((a-b)**2),
+ 'Mental maths, factoring and simplifying.|ذہنی حساب، اجزائے ضربی اور آسان کرنے میں۔',
+ 'Expands the square of two terms added or subtracted.|دو اجزا کے مجموعے یا فرق کے مربع کو پھیلاتا ہے۔|दो पदों के योग या अंतर के वर्ग को फैलाता है।|يفكّ مربع مجموع حدين أو الفرق بينهما.']
+].map(r=>({cat:r[0],name:r[1],ur:r[2],formula:r[3],vars:r[4],fn:r[5],imp:r[6].split('|'),desc:r[7].split('|')}));
+
+const EX={fr:`Aire d'un cercle de rayon r.|Longueur du contour d'un cercle.|Aire = longueur × largeur ; périmètre = 2(l + w).|La moitié de la base fois la hauteur.|Aire d'un triangle à partir de ses trois côtés.|Dans un triangle rectangle, c² = a² + b².|Moyenne des bases parallèles fois la hauteur.|Volume d'une sphère ; surface = 4πr².|Aire de la base fois la hauteur.|Un tiers du cylindre correspondant.|Racines de ax² + bx + c = 0 via le discriminant.|Montée divisée par la distance horizontale.|Pythagore appliqué aux coordonnées.|Suite où l'on ajoute toujours le même nombre d.|Suite où l'on multiplie toujours par la même raison r.|Rapports des côtés d'un triangle rectangle pour l'angle θ.|Pythagore généralisé à tout triangle.|Compte les arrangements (nPr) et combinaisons (nCr).|Plus grand diviseur commun et plus petit multiple commun.|Puissance à laquelle élever b pour obtenir x.|Variation d'une valeur par rapport à l'originale.|Intérêt calculé uniquement sur le capital initial.|Les intérêts s'ajoutent au capital et produisent des intérêts.|Compare le prix de vente au prix de revient.|Centre et dispersion d'un ensemble de données.|Écart typique des valeurs par rapport à la moyenne.|Chance qu'un événement se produise, de 0 à 1.|Somme des angles intérieurs d'un polygone à n côtés.|Le logarithme d'un produit est la somme des logarithmes.|Un nombre premier n'a que deux diviseurs : 1 et lui-même.|Somme des n premiers entiers et de leurs carrés.|Multiplier des puissances de même base additionne les exposants.|Aire d'une ellipse de demi-axes a et b.|Volume et surface totale d'un parallélépipède rectangle.|Carré d'une somme : (a + b)² = a² + 2ab + b².`.split('|'),es:`Área de un círculo de radio r.|Longitud del borde de un círculo.|Área = largo × ancho; perímetro = 2(l + w).|La mitad de la base por la altura.|Área de un triángulo a partir de sus tres lados.|En un triángulo rectángulo, c² = a² + b².|Promedio de las bases paralelas por la altura.|Volumen de una esfera; superficie = 4πr².|Área de la base por la altura.|Un tercio del cilindro correspondiente.|Raíces de ax² + bx + c = 0 con el discriminante.|Subida dividida entre el avance horizontal.|Pitágoras aplicado a coordenadas.|Sucesión que suma siempre la misma cantidad d.|Sucesión que multiplica siempre por la misma razón r.|Razones de los lados de un triángulo rectángulo para el ángulo θ.|Pitágoras generalizado a cualquier triángulo.|Cuenta ordenaciones (nPr) y combinaciones (nCr).|Máximo común divisor y mínimo común múltiplo.|Potencia a la que se eleva b para obtener x.|Cuánto subió o bajó un valor respecto al original.|Interés calculado solo sobre el capital inicial.|Los intereses se suman al capital y generan más intereses.|Compara el precio de venta con el costo.|Centro y dispersión de un conjunto de datos.|Distancia típica de los valores respecto a la media.|Posibilidad de que ocurra un suceso, de 0 a 1.|Suma de los ángulos interiores de un polígono de n lados.|El logaritmo de un producto es la suma de logaritmos.|Un número primo solo tiene dos divisores: 1 y él mismo.|Suma de los primeros n enteros y de sus cuadrados.|Al multiplicar potencias de igual base se suman los exponentes.|Área de una elipse con semiejes a y b.|Volumen y superficie total de un prisma rectangular.|Cuadrado de una suma: (a + b)² = a² + 2ab + b².`.split('|'),tr:`r yarıçaplı dairenin alanı.|Dairenin çevresinin uzunluğu.|Alan = uzunluk × genişlik; çevre = 2(l + w).|Taban çarpı yüksekliğin yarısı.|Üç kenarından üçgenin alanı.|Dik üçgende c² = a² + b².|Paralel kenarların ortalaması çarpı yükseklik.|Kürenin hacmi; yüzey alanı = 4πr².|Taban alanı çarpı yükseklik.|Aynı ölçülü silindirin üçte biri.|Diskriminant ile ax² + bx + c = 0 köklerini bulur.|Yükselişin yatay uzaklığa oranı.|Koordinatlara uygulanan Pisagor teoremi.|Her adımda hep aynı d miktarı eklenen dizi.|Her terimin hep aynı r oranıyla çarpıldığı dizi.|θ açısı için dik üçgen kenar oranları.|Her üçgen için genelleştirilmiş Pisagor.|Sıralı (nPr) ve sırasız (nCr) seçimleri sayar.|En büyük ortak bölen ve en küçük ortak kat.|x değerini elde etmek için b nin üssü.|Bir değerin orijinaline göre artışı veya azalışı.|Yalnızca ana para üzerinden hesaplanan faiz.|Faiz ana paraya eklenir ve yeniden faiz kazanır.|Satış fiyatını maliyetle karşılaştırır.|Veri kümesinin merkezi ve yayılımı.|Değerlerin ortalamadan tipik uzaklığı.|Bir olayın gerçekleşme şansı, 0 ile 1 arası.|n kenarlı çokgenin iç açıları toplamı.|Çarpımın logaritması logaritmaların toplamıdır.|Asal sayının yalnızca iki böleni vardır: 1 ve kendisi.|İlk n sayının ve karelerinin toplamı.|Tabanları aynı üsleri çarparken üsler toplanır.|a ve b yarı eksenli elipsin alanı.|Dikdörtgenler prizmasının hacmi ve yüzey alanı.|Toplamın karesi: (a + b)² = a² + 2ab + b².`.split('|'),fa:`مساحت دایره‌ای با شعاع r.|طول مرز دایره.|مساحت = طول × عرض؛ محیط = 2(l + w).|نصف قاعده ضرب در ارتفاع.|مساحت مثلث از روی سه ضلع.|در مثلث قائم‌الزاویه c² = a² + b².|میانگین دو ضلع موازی ضرب در ارتفاع.|حجم کره؛ مساحت سطح = 4πr².|مساحت قاعده ضرب در ارتفاع.|یک‌سوم استوانه هم‌اندازه.|ریشه‌های ax² + bx + c = 0 با مبین.|تغییر عمودی تقسیم بر تغییر افقی.|قضیه فیثاغورس روی مختصات.|دنباله‌ای که هر بار مقدار ثابت d اضافه می‌شود.|دنباله‌ای که هر جمله در نسبت ثابت r ضرب می‌شود.|نسبت اضلاع مثلث قائم‌الزاویه برای زاویه θ.|فیثاغورس تعمیم‌یافته برای هر مثلث.|شمارش ترتیب‌ها (nPr) و ترکیب‌ها (nCr).|بزرگ‌ترین مقسوم‌علیه مشترک و کوچک‌ترین مضرب مشترک.|توانی که b باید به آن برسد تا x شود.|افزایش یا کاهش یک مقدار نسبت به مقدار اصلی.|سود فقط روی اصل پول محاسبه می‌شود.|سود به اصل اضافه می‌شود و دوباره سود می‌آورد.|مقایسه قیمت فروش با قیمت خرید.|مرکز و پراکندگی مجموعه داده‌ها.|فاصله معمول مقادیر از میانگین.|شانس وقوع یک رویداد، بین 0 تا 1.|مجموع زاویه‌های داخلی چندضلعی n ضلعی.|لگاریتم حاصل‌ضرب برابر مجموع لگاریتم‌هاست.|عدد اول فقط دو مقسوم‌علیه دارد: 1 و خودش.|مجموع n عدد طبیعی اول و مربعات آن‌ها.|ضرب توان‌های هم‌پایه، توان‌ها را جمع می‌کند.|مساحت بیضی با نیم‌قطرهای a و b.|حجم و مساحت کل مکعب مستطیل.|مربع مجموع: (a + b)² = a² + 2ab + b².`.split('|')};
+function fText(f,lang,k){ const i=BUILT[lang]; const d=i!==undefined?(f.desc[i]||f.desc[0]):(EX[lang]&&EX[lang][k])||f.desc[0]; return { d, m:(i===0||i===1)?f.imp[i]:f.imp[0] }; }
+const TC={}; let langTok=0, transOK=false;
+async function gtr(text,lang){
+  const k=lang+'|'+text; if(TC[k]) return TC[k];
+  const r=await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&dt=t&tl='+encodeURIComponent(lang)+'&q='+encodeURIComponent(text),{credentials:'omit',referrerPolicy:'no-referrer'});
+  if(!r.ok) throw new Error('translate failed');
+  const j=await r.json();
+  if(!Array.isArray(j)||!Array.isArray(j[0])) throw new Error('bad response');
+  return (TC[k]=j[0].map(x=>String(x&&x[0]||'')).join(''));
+}
+function applyFormulaLang(){
+  const sel=document.getElementById('formula-lang'); let lang=sel.value;
+  const own=BUILT[lang]!==undefined||!!EX[lang];
+  if(!own&&!transOK){
+    if(!confirm('To show this language, the formula descriptions (English text only, never your numbers) will be sent to Google Translate. Continue?\n\nاس زبان کے لیے صرف فارمولوں کی انگریزی ڈسکرپشن گوگل ٹرانسلیٹ کو بھیجی جائے گی، آپ کے نمبر نہیں۔ جاری رکھیں؟')){ sel.value='en'; lang='en'; } else { transOK=true; }
+  }
+  const rtl=RTL.includes(lang), ownNow=BUILT[lang]!==undefined||!!EX[lang];
+  const needDesc=!ownNow, needImp=!(lang==='en'||lang==='ur')&&(needDesc||transOK), tok=++langTok, dir=rtl?'rtl':'ltr', jobs=[];
+  document.querySelectorAll('.f-item').forEach(el=>{
+    const i=+el.dataset.i, f=FD[i], t=fText(f,lang,i), imp=el.querySelector('.f-imp'), d=el.querySelector('.f-desc');
+    imp.textContent=t.m; imp.dir=dir; d.textContent=t.d; d.dir=dir;
+    if(needImp||needDesc) jobs.push(async()=>{
+      try{
+        if(needImp){ const x=await gtr(f.imp[0],lang); if(tok===langTok){ imp.textContent=x; } }
+        if(needDesc){ const x=await gtr(f.desc[0],lang); if(tok===langTok){ d.textContent=x; } }
+      }catch(e){
+        if(tok===langTok&&needDesc){
+          const a=document.createElement('a'); a.target='_blank'; a.rel='noopener noreferrer';
+          a.href='https://translate.google.com/?sl=en&tl='+encodeURIComponent(lang)+'&text='+encodeURIComponent(f.desc[0])+'&op=translate';
+          a.textContent='🌐 Translate description (Google Translate)'; a.style.cssText='display:block;margin-top:6px;color:var(--accent);font-weight:600';
+          d.appendChild(a);
+        }
+      }
+    });
+  });
+  const run=async()=>{ while(jobs.length&&tok===langTok){ await jobs.shift()(); } };
+  for(let k=0;k<4;k++) run();
+}
+function buildFormulas(){
+  const cat=document.getElementById('formula-cat'), lang=document.getElementById('formula-lang'), list=document.getElementById('formula-list');
+  const add=(sel,v,t)=>{ const o=document.createElement('option'); o.value=v; o.textContent=t; sel.appendChild(o); };
+  add(cat,'all','All categories · تمام');
+  Object.keys(CATS).forEach(k=>add(cat,k,CATS[k][0]+' · '+CATS[k][1]));
+  LANGS.forEach(([c,n])=>add(lang,c,n+(BUILT[c]===undefined&&!EX[c]?' 🌐':'')));
+  Object.keys(CATS).forEach(k=>{
+    const wrap=document.createElement('div'); wrap.className='f-cat'; wrap.dataset.cat=k;
+    const h=document.createElement('h3'); h.textContent=CATS[k][0]+' · '+CATS[k][1]; wrap.appendChild(h);
+    FD.forEach((f,i)=>{
+      if(f.cat!==k) return;
+      const det=document.createElement('details'); det.className='f-item'; det.dataset.i=i;
+      det.dataset.s=(f.name+' '+f.ur+' '+f.formula).toLowerCase();
+      const sum=document.createElement('summary');
+      const nm=document.createElement('span'); nm.className='f-name'; nm.textContent=f.name+' · '+f.ur;
+      const fo=document.createElement('span'); fo.className='f-formula'; fo.textContent=f.formula;
+      const im=document.createElement('span'); im.className='f-imp';
+      sum.append(nm,fo,im); det.appendChild(sum);
+      const body=document.createElement('div'); body.className='f-body'; body.id='fb'+i;
+      const d=document.createElement('p'); d.className='f-desc'; body.appendChild(d);
+      const fields=document.createElement('div'); fields.className='f-fields';
+      f.vars.forEach((v,j)=>{
+        const g=document.createElement('div'); g.className='input-group';
+        const lab=document.createElement('label'); lab.htmlFor='fi'+i+'_'+j; lab.textContent=v.replace(/^[~±]/,'');
+        const inp=document.createElement('input'); inp.id='fi'+i+'_'+j;
+        if(v[0]==='~'){ inp.type='text'; inp.placeholder='e.g. 12, 15, 9, 20'; } else { inp.type='number'; inp.step='any'; }
+        g.append(lab,inp); fields.appendChild(g);
+      });
+      body.appendChild(fields);
+      const btn=document.createElement('button'); btn.type='button'; btn.className='action-btn'; btn.textContent='Solve · حل کریں';
+      btn.addEventListener('click',()=>solveFormula(i));
+      const res=document.createElement('div'); res.className='f-result'; res.setAttribute('aria-live','polite');
+      body.append(btn,res); det.appendChild(body); wrap.appendChild(det);
+    });
+    list.appendChild(wrap);
+  });
+  applyFormulaLang();
+}
+function solveFormula(i){
+  const f=FD[i], res=document.querySelector('#fb'+i+' .f-result');
+  try{
+    const vals=f.vars.map((v,j)=>{
+      const raw=document.getElementById('fi'+i+'_'+j).value.trim(), lab=v.replace(/^[~±]/,'');
+      if(!raw) throw new Error('Please enter '+lab+'.');
+      if(v[0]==='~'){ const a=raw.split(/[\s,;]+/).filter(Boolean).map(Number); if(!a.length||a.some(x=>!Number.isFinite(x))) throw new Error('Enter numbers separated by commas.'); return a; }
+      const n=Number(raw); if(!Number.isFinite(n)) throw new Error('Enter a valid '+lab+'.');
+      if(v[0]!=='±'&&n<0) throw new Error(lab+' cannot be negative.');
+      return n;
+    });
+    res.textContent=f.fn(vals);
+  }catch(e){ res.textContent=e.message||'Please check your input.'; }
+  res.style.display='block';
+}
+function filterFormulas(){
+  const q=document.getElementById('formula-search').value.trim().toLowerCase(), cat=document.getElementById('formula-cat').value;
+  let shown=0;
+  document.querySelectorAll('#formula-list .f-cat').forEach(w=>{
+    let any=0;
+    w.querySelectorAll('.f-item').forEach(it=>{ const ok=(cat==='all'||w.dataset.cat===cat)&&it.dataset.s.includes(q); it.style.display=ok?'':'none'; if(ok) any++; });
+    w.style.display=any?'':'none'; shown+=any;
+  });
+  document.getElementById('formula-empty').style.display=shown?'none':'block';
+}
+/* Accessible names for symbol-only keys */
+(function(){
+  const L={'AC':'All clear','C':'Clear','⌫':'Backspace','%':'Percent','÷':'Divide','×':'Multiply','−':'Minus','+':'Plus','=':'Equals','.':'Decimal point','√':'Square root','x²':'Square','xʸ':'Power','(':'Open bracket',')':'Close bracket'};
+  document.querySelectorAll('button.btn:not([aria-label])').forEach(b=>{ const t=b.textContent.trim(); if(L[t]) b.setAttribute('aria-label',L[t]); });
+  document.getElementById('theme-btn').setAttribute('aria-pressed', String(document.body.classList.contains('dark-theme')));
+})();
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('install-btn'), dp=null;
+  if(!btn) return;
+  var standalone=(window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches)||window.navigator.standalone===true;
+  if(standalone) return; /* already running as an installed app: keep the button hidden */
+  var ios=/iphone|ipad|ipod/i.test(navigator.userAgent)&&!window.MSStream;
+  btn.hidden=false; /* always visible in the browser; the click handler picks the best install method */
+  window.addEventListener('beforeinstallprompt',function(e){ e.preventDefault(); dp=e; });
+  window.addEventListener('appinstalled',function(){ dp=null; btn.hidden=true; });
+  btn.addEventListener('click',function(){
+    if(dp){ dp.prompt(); dp.userChoice.then(function(){ dp=null; }); return; }
+    if(ios){ alert('To install: tap the Share button in Safari, then choose "Add to Home Screen".\n\nانسٹال کرنے کے لیے Safari میں Share دبائیں، پھر "Add to Home Screen" چنیں۔'); return; }
+    alert('To install: open your browser menu (\u22EE) and tap "Install app" or "Add to Home screen".\n(If the app is already installed, open it from your home screen.)\n\nانسٹال کرنے کے لیے براؤزر کے مینو (\u22EE) میں "Install app" یا "Add to Home screen" دبائیں۔ اگر ایپ پہلے سے انسٹال ہے تو ہوم اسکرین سے کھولیں۔');
+  });
+})();
+</script>
+<script>
+/* ===== Skins select, hero/reviews sliders, share buttons, copy/WhatsApp/voice bars ===== */
+(function () {
+  const $ = id => document.getElementById(id);
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const SITE = location.origin + '/';
+  const SHARE_TEXT = 'Calculator10: free everyday calculators, math formulas and more';
+  $('skin-select').addEventListener('change', e => setSkin(e.target.value));
+
+  /* ---- generic slider ---- */
+  function makeSlider(root, auto) {
+    const track = root.querySelector('.track'), slides = [...track.children];
+    let i = 0, timer = null, paused = !auto || reduce;
+    const mk = (txt, aria, fn) => { const b = document.createElement('button'); b.type = 'button'; b.className = 's-btn'; b.textContent = txt; b.setAttribute('aria-label', aria); b.addEventListener('click', fn); return b; };
+    const dots = document.createElement('div'); dots.className = 's-dots';
+    slides.forEach((_, n) => { const d = document.createElement('button'); d.type = 'button'; d.className = 's-dot'; d.setAttribute('aria-label', 'Go to slide ' + (n + 1)); d.addEventListener('click', () => go(n, true)); dots.appendChild(d); });
+    const prev = mk('‹', 'Previous slide', () => go(i - 1, true)), next = mk('›', 'Next slide', () => go(i + 1, true));
+    const pause = mk('', '', () => { paused = !paused; sync(); });
+    const ctrl = document.createElement('div'); ctrl.className = 's-ctrl'; ctrl.append(prev, dots, pause, next);
+    if (slides.length < 2) { ctrl.style.display = 'none'; root.classList.add('single'); }
+    root.appendChild(ctrl);
+    function restart() { clearInterval(timer); if (!paused && slides.length > 1) timer = setInterval(() => go(i + 1), 5500); }
+    function sync() { pause.textContent = paused ? '▶' : '⏸'; pause.setAttribute('aria-label', paused ? 'Play slides' : 'Pause slides'); restart(); }
+    function go(n, user) {
+      i = (n + slides.length) % slides.length;
+      track.style.transform = 'translateX(' + (-100 * i) + '%)';
+      slides.forEach((sl, k) => { sl.setAttribute('aria-hidden', String(k !== i)); sl.inert = k !== i; });
+      [...dots.children].forEach((d, k) => d.setAttribute('aria-current', String(k === i)));
+      if (user) restart();
+    }
+    root.addEventListener('mouseenter', () => clearInterval(timer));
+    root.addEventListener('mouseleave', restart);
+    root.addEventListener('focusin', () => clearInterval(timer));
+    let x0 = null;
+    root.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+    root.addEventListener('touchend', e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) go(i + (dx < 0 ? 1 : -1), true); x0 = null; }, { passive: true });
+    go(0); sync();
+  }
+  const hero = $('hero');
+  hero.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => {
+    const g = b.dataset.go;
+    if (g === 'install') { $('install-btn').click(); return; }
+    const t = document.querySelector('[data-tab="' + g + '"]'); if (t) { t.click(); $('main').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }
+  }));
+  makeSlider(hero, true);
+
+  /* ---- reviews: ONLY real feedback you have permission to show goes in this list ----
+     Example entry:  { name: 'Ayesha', text: 'Very easy to use, the Zakat calculator helped me a lot.' }          */
+  const REVIEWS = [];
+  const rt = $('reviews-track');
+  if (REVIEWS.length) {
+    REVIEWS.forEach(r => {
+      const sl = document.createElement('div'); sl.className = 'slide';
+      const q = document.createElement('p'); q.textContent = '“' + r.text + '”';
+      const n = document.createElement('div'); n.className = 'review-name'; n.textContent = '— ' + r.name;
+      sl.append(q, n); rt.appendChild(sl);
+    });
+  } else {
+    const sl = document.createElement('div'); sl.className = 'slide';
+    const h = document.createElement('h2'); h.textContent = '💬 Your feedback matters';
+    const p = document.createElement('p'); p.textContent = 'Tell us what to improve.';
+    const a = document.createElement('a'); a.className = 's-link'; a.href = 'mailto:shopetsy13@gmail.com?subject=Calculator10%20feedback'; a.textContent = 'Send feedback';
+    sl.append(h, p, a); rt.appendChild(sl);
+  }
+  makeSlider($('reviews'), REVIEWS.length > 1);
+
+  /* ---- social share buttons (plain links: no third-party scripts) ---- */
+  const row = $('share-row');
+  const link = (label, href) => { const a = document.createElement('a'); a.href = href; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = label; a.setAttribute('aria-label', 'Share on ' + label); row.appendChild(a); };
+  const u = encodeURIComponent(SITE), t = encodeURIComponent(SHARE_TEXT);
+  link('WhatsApp', 'https://wa.me/?text=' + t + '%20' + u);
+  link('Facebook', 'https://www.facebook.com/sharer/sharer.php?u=' + u);
+  link('X (Twitter)', 'https://twitter.com/intent/tweet?text=' + t + '&url=' + u);
+  link('Telegram', 'https://t.me/share/url?url=' + u + '&text=' + t);
+  const cb = document.createElement('button'); cb.type = 'button'; cb.textContent = '🔗 Copy link'; cb.setAttribute('aria-label', 'Copy website link');
+  cb.addEventListener('click', async () => { try { await navigator.clipboard.writeText(SITE); cb.textContent = 'Copied ✓'; } catch (e) { cb.textContent = SITE; } setTimeout(() => { cb.textContent = '🔗 Copy link'; }, 2200); });
+  row.appendChild(cb);
+  if (navigator.share) { const nb = document.createElement('button'); nb.type = 'button'; nb.textContent = '📤 Share…'; nb.addEventListener('click', () => { navigator.share({ title: 'Calculator10', text: SHARE_TEXT, url: SITE }).catch(() => {}); }); row.appendChild(nb); }
+
+  /* ---- speech to expression ("fifty plus one hundred" -> 50+100) ---- */
+  window.speechToExpr = function (str) {
+    const U = { zero: 0, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12, thirteen: 13, fourteen: 14, fifteen: 15, sixteen: 16, seventeen: 17, eighteen: 18, nineteen: 19, twenty: 20, thirty: 30, forty: 40, fifty: 50, sixty: 60, seventy: 70, eighty: 80, ninety: 90 };
+    const M = { thousand: 1e3, lakh: 1e5, million: 1e6, crore: 1e7, billion: 1e9 };
+    str = ' ' + String(str).toLowerCase().replace(/,/g, '').replace(/×/g, ' times ').replace(/÷/g, ' over ') + ' ';
+    str = str.replace(/multiplied by|multiply by|times|into/g, ' * ').replace(/divided by|divide by|over/g, ' / ')
+      .replace(/(\d)\s*x\s*(?=\d)/g, '$1 * ').replace(/\b(plus|add)\b/g, ' + ').replace(/\b(minus|subtract|less)\b/g, ' - ')
+      .replace(/\b(percent|percentage)\b/g, ' % ').replace(/\bpoint\b/g, ' . ').replace(/\b(equals?|is)\b/g, ' ');
+    const out = []; let cur = 0, tot = 0, inNum = false;
+    const flush = () => { if (inNum) { out.push(String(tot + cur)); cur = 0; tot = 0; inNum = false; } };
+    str.split(/\s+/).filter(Boolean).forEach(w => {
+      if (U[w] !== undefined) { cur += U[w]; inNum = true; }
+      else if (w === 'hundred') { cur = (cur || 1) * 100; inNum = true; }
+      else if (M[w]) { tot += (cur || 1) * M[w]; cur = 0; inNum = true; }
+      else if (w === 'and' && inNum) { /* "one hundred and five" */ }
+      else { flush(); out.push(w); }
+    });
+    flush();
+    return out.join('').replace(/[^0-9+\-*/().%]/g, '');
+  };
+
+  /* ---- Copy / WhatsApp / Speak bar under Simple and Scientific displays ---- */
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  let voiceOK = false;
+  ['simple', 'sci'].forEach(type => {
+    const disp = $(type + '-display');
+    const bar = document.createElement('div'); bar.className = 'r-actions calc-actions';
+    const status = document.createElement('span'); status.className = 'r-status'; status.setAttribute('role', 'status');
+    const say = m => { status.textContent = m; clearTimeout(say.t); say.t = setTimeout(() => { status.textContent = ''; }, 3500); };
+    const mk = (label, aria, fn) => { const b = document.createElement('button'); b.type = 'button'; b.className = 'r-act'; b.textContent = label; b.setAttribute('aria-label', aria); b.addEventListener('click', fn); return b; };
+    const text = () => historyData[type][0] || disp.value;
+    bar.appendChild(mk('Copy', 'Copy result', async () => { try { await navigator.clipboard.writeText(text()); say('Copied ✓'); } catch (e) { say('Copy not available'); } }));
+    bar.appendChild(mk('WhatsApp', 'Share result on WhatsApp', () => { window.open('https://wa.me/?text=' + encodeURIComponent(text() + '\n' + SITE), '_blank', 'noopener,noreferrer'); }));
+    if (SR) {
+      let rec = null;
+      const sp = mk('🎤 Speak', 'Speak a calculation', () => {
+        if (rec) { rec.stop(); return; }
+        if (!voiceOK) {
+          if (!confirm('Voice input uses your browser\'s speech service (for example Google in Chrome), which may send your voice to its servers. Nothing is sent until you allow the microphone. Continue?\n\nآواز کی پہچان آپ کے براؤزر کی سروس (جیسے Chrome میں گوگل) کرتی ہے اور آواز اس کے سرور کو جا سکتی ہے۔ جاری رکھیں؟')) return;
+          voiceOK = true;
+        }
+        rec = new SR(); rec.lang = 'en-US'; rec.interimResults = false; rec.maxAlternatives = 1;
+        sp.textContent = '🎙 Listening…';
+        rec.onresult = ev => {
+          const said = ev.results[0][0].transcript, ex = window.speechToExpr(said);
+          if (!ex) { say('Heard “' + said + '” but found no calculation'); return; }
+          exprs[type] = ex; justCalculated[type] = false; updateDisplay(type, ex); calcResult(type); say('Heard: ' + said);
+        };
+        rec.onerror = ev => { say(ev.error === 'not-allowed' ? 'Microphone permission denied' : 'Voice input failed (' + ev.error + ')'); };
+        rec.onend = () => { rec = null; sp.textContent = '🎤 Speak'; };
+        try { rec.start(); } catch (e) { rec = null; sp.textContent = '🎤 Speak'; say('Voice input not available'); }
+      });
+      bar.appendChild(sp);
+    }
+    bar.appendChild(status);
+    disp.insertAdjacentElement('afterend', bar);
+  });
+
+  /* ---- WhatsApp button for the result boxes of the other calculators ---- */
+  const orig = window.addResultActions;
+  window.addResultActions = function (el, textValue) {
+    orig(el, textValue);
+    const bar = el.querySelector('.r-actions');
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'r-act'; b.textContent = 'WhatsApp'; b.setAttribute('aria-label', 'Share result on WhatsApp');
+    b.addEventListener('click', () => { window.open('https://wa.me/?text=' + encodeURIComponent(textValue + '\n' + SITE), '_blank', 'noopener,noreferrer'); });
+    bar.insertBefore(b, bar.querySelector('.r-status'));
+  };
+})();
+</script>
+<script>
+/* Voice navigation: say a calculator name (e.g. "BMI") to open it. Runs in the browser only. */
+(function () {
+  var btn = document.getElementById('voice-nav-btn');
+  var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!btn || !SR) return;
+  btn.hidden = false;
+  var consented = false, busy = false;
+  /* Each entry: [tab name or page, words that match it]. Longer / more specific names are checked first. */
+  var TARGETS = [
+    ['bmi', [/\bbmi\b/, /body mass/]],
+    ['emi', [/\bemi\b/, /\bloan\b/]],
+    ['zakat', [/\bzakat\b/]],
+    ['gst', [/\bgst\b/, /\btax\b/]],
+    ['gold', [/\bgold\b/]],
+    ['pct', [/\bpercentage\b/, /\bpercent\b/]],
+    ['discount', [/\bdiscount\b/]],
+    ['age', [/\bage\b/]],
+    ['land', [/\bland\b/]],
+    ['units', [/\bunit/, /\bconverter\b/]],
+    ['calorie', [/\bcalorie/, /\bcalories\b/]],
+    ['water', [/\bwater\b/]],
+    ['funny', [/\bfunny\b/, /\blove\b/]],
+    ['sci', [/\bscientific\b/, /\bscience\b/]],
+    ['simple', [/\bsimple\b/, /\bbasic\b/]],
+    ['formulas', [/\bformula/]],
+    ['WORDS', [/\bword/, /\bcharacter/, /\bcounter\b/]]
+  ];
+  function match(text) {
+    var t = String(text).toLowerCase();
+    for (var i = 0; i < TARGETS.length; i++) {
+      var k = TARGETS[i][0];
+      if (TARGETS[i][1].some(function (re) { return re.test(t); })) return k;
+    }
+    return null;
+  }
+  function openTarget(k) {
+    if (k === 'WORDS') { window.location.href = 'word-counter.html'; return 'Opening Word Counter…'; }
+    var t = document.querySelector('[data-tab="' + k + '"]');
+    if (!t) return 'That calculator is not available.';
+    if (typeof switchTab === 'function') switchTab(k, t); else t.click();
+    var main = document.getElementById('main');
+    if (main) main.scrollIntoView({ block: 'start' });
+    return 'Opened: ' + t.textContent.trim();
+  }
+  function say(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = '🎤 Calc'; }, 2500); }
+
+  btn.addEventListener('click', function () {
+    if (busy) return;
+    if (!consented) {
+      if (!confirm('Voice navigation uses your browser\'s speech service (for example Google in Chrome), which may send your voice to its servers. Nothing is sent until you allow the microphone. Continue?\n\nآواز کی پہچان آپ کے براؤزر کی سروس کرتی ہے۔ جاری رکھیں؟')) return;
+      consented = true;
+    }
+    busy = true;
+    var rec = new SR(); rec.lang = 'en-US'; rec.interimResults = false; rec.maxAlternatives = 1;
+    btn.textContent = '🎙 Calc';
+    rec.onresult = function (ev) {
+      var said = ev.results[0][0].transcript, k = match(said);
+      say(k ? '✔ ' + openTarget(k).replace(/^Opened: /, '') : '✖ no match');
+    };
+    rec.onerror = function (ev) { say(ev.error === 'not-allowed' ? '✖ mic blocked' : '✖ try again'); };
+    rec.onend = function () { busy = false; if (btn.textContent === '🎙') btn.textContent = '🎤 Calc'; };
+    try { rec.start(); } catch (e) { busy = false; say('✖'); }
+  });
+  window.__voiceNavMatch = match;
+})();
+</script>
+<script>
+if('serviceWorker' in navigator){ window.addEventListener('load',function(){ navigator.serviceWorker.register('/sw.js').catch(function(){}); }); }
+</script>
+</body>
+</html>
