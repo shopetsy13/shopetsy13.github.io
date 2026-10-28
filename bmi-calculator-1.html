@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Free BMI calculator. Enter weight and height to get your Body Mass Index and adult weight category. Runs in your browser, nothing is stored.">
+<meta name="theme-color" content="#16231F">
+<link rel="canonical" href="https://shopetsy13.github.io/bmi-calculator.html">
+<meta property="og:title" content="BMI Calculator: Body Mass Index Online (Free) | Calculator10">
+<meta property="og:description" content="Free BMI calculator. Enter weight and height to get your Body Mass Index and adult weight category. Runs in your browser, nothing is stored.">
+<meta property="og:url" content="https://shopetsy13.github.io/bmi-calculator.html">
+<meta property="og:image" content="https://shopetsy13.github.io/og-image.png">
+<title>BMI Calculator: Body Mass Index Online (Free) | Calculator10</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<style>
+:root{--page:#F3F5F1;--card:#FFFFFF;--ink:#16231F;--muted:#55655F;--line:#C3CCC6;--accent:#A93C0C}
+body{font-family:Segoe UI,Tahoma,Arial,sans-serif;max-width:720px;margin:0 auto;padding:20px 16px 40px;line-height:1.65;color:var(--ink);background:var(--page)}
+a{color:var(--accent)}
+h1{font-size:26px;margin:12px 0 6px}
+h2{font-size:19px;margin:26px 0 8px}
+.crumb{font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0}
+label{display:block;font-weight:600;font-size:14px;margin:12px 0 4px}
+input{width:100%;height:46px;padding:0 12px;border:1px solid var(--line);border-radius:10px;font-size:16px;background:#fff;color:var(--ink);box-sizing:border-box}
+.hint{font-size:13px;color:var(--muted);margin:4px 0 0}
+button.go{width:100%;height:50px;margin-top:18px;background:var(--accent);color:#fff;border:0;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer}
+.result{margin-top:16px;padding:14px;background:#16231F;color:#EAF1EC;border-radius:12px;display:none;font-size:15px;line-height:1.6}
+.note{font-size:13px;color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:8px;text-align:left}
+th{background:#E6EBE7}
+ul{padding-left:20px}
+li{margin:4px 0}
+footer{margin-top:30px;font-size:14px;color:var(--muted)}
+footer a{margin-right:12px}
+</style><script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "@id": "https://shopetsy13.github.io/bmi-calculator.html#app",
+   "name": "BMI Calculator - Calculator10",
+   "url": "https://shopetsy13.github.io/bmi-calculator.html",
+   "applicationCategory": "HealthApplication",
+   "operatingSystem": "Any (web browser)",
+   "browserRequirements": "Requires JavaScript",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "description": "Free BMI calculator. Enter weight and height to get your Body Mass Index and adult weight category. Runs in your browser, nothing is stored.",
+   "inLanguage": "en",
+   "provider": {
+    "@type": "WebSite",
+    "name": "Calculator10",
+    "url": "https://shopetsy13.github.io/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://shopetsy13.github.io/bmi-calculator.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Is BMI accurate for everyone?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. BMI does not measure body fat directly. Muscular people can have a high BMI while being healthy, and older adults or people with less muscle can have a normal BMI with a higher body fat level."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does BMI apply to children and teens?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. For children and teens, BMI is compared with age and sex percentiles, so the adult table above does not apply."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What should I do with my result?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Use it as a starting point. A doctor or dietitian can look at waist size, blood pressure, blood sugar, and your overall health before giving advice."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<p class="crumb"><a href="index.html">← Calculator10</a></p>
+<h1>BMI Calculator</h1>
+<p>Body Mass Index (BMI) is a quick screening number that compares your weight with your height. Enter your weight and height below to see your BMI and its general category. Everything runs in your browser. Nothing you type is stored or sent anywhere.</p>
+
+<div class="card">
+  <label for="bmi-weight">Weight (kg)</label>
+  <input id="bmi-weight" type="number" inputmode="decimal" min="1" step="any" placeholder="e.g. 70">
+  <label for="bmi-height">Height (cm)</label>
+  <input id="bmi-height" type="number" inputmode="decimal" min="20" step="any" placeholder="e.g. 175">
+  <button class="go" id="bmi-btn" type="button">Calculate BMI</button>
+  <div id="bmi-result" class="result" role="status" aria-live="polite"></div>
+</div>
+
+<h2>How BMI is calculated</h2>
+<p>BMI = weight (kg) ÷ height (m) × height (m). For example, 70 kg and 1.75 m gives 70 ÷ (1.75 × 1.75) = about 22.9.</p>
+
+<h2>BMI categories for adults</h2>
+<table>
+  <tr><th>BMI</th><th>General category</th></tr>
+  <tr><td>Below 18.5</td><td>Underweight</td></tr>
+  <tr><td>18.5 to 24.9</td><td>Normal weight</td></tr>
+  <tr><td>25 to 29.9</td><td>Overweight</td></tr>
+  <tr><td>30 and above</td><td>Obesity range</td></tr>
+</table>
+
+<h2>Common questions</h2>
+<p><strong>Is BMI accurate for everyone?</strong> No. BMI does not measure body fat directly. Muscular people can have a high BMI while being healthy, and older adults or people with less muscle can have a normal BMI with a higher body fat level.</p>
+<p><strong>Does BMI apply to children and teens?</strong> No. For children and teens, BMI is compared with age and sex percentiles, so the adult table above does not apply.</p>
+<p><strong>What should I do with my result?</strong> Use it as a starting point. A doctor or dietitian can look at waist size, blood pressure, blood sugar, and your overall health before giving advice.</p>
+
+<p class="note">BMI is a screening measure, not a medical diagnosis. This page does not give medical advice.</p>
+
+<footer>
+  <a href="privacy.html">Privacy Policy</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a>
+  <p>© Calculator10. All rights reserved.</p>
+</footer>
+<script src="bmi.js"></script>
+</body></html>
