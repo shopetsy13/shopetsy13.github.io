@@ -58,3 +58,4 @@
   $('wc-clear').addEventListener('click', function () { box.value = ''; render(); box.focus(); });
   render();
 })();
+      
