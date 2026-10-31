@@ -1,5 +1,5 @@
 /* Calculator10 service worker. Bump VERSION whenever site files change. */
-const VERSION = 'v39';
+const VERSION = 'v40';
 const CORE = 'smartcalc-core-' + VERSION;
 const RUNTIME = 'smartcalc-rt-' + VERSION;
 const PRECACHE = ['/', '/index.html', '/manifest.json', '/icon-192.png', '/icon-512.png', '/icon-maskable-512.png', '/privacy.html', '/about.html', '/contact.html', '/404.html', '/owner.jpg', '/favicon.ico', '/favicon-32.png', '/zakat-calculator.html', '/zakat.js', '/bmi-calculator.html', '/bmi.js', '/emi-calculator.html', '/emi.js', '/gst-calculator.html', '/gst.js', '/word-counter.html', '/word-counter.js'];
