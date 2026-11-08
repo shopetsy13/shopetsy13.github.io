@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Free age calculator: find your exact age in years, months and days, total days and weeks, and days until your next birthday. Runs in your browser.">
+<meta name="theme-color" content="#16231F">
+<link rel="canonical" href="https://calculator10.com/age-calculator.html">
+<meta property="og:title" content="Age Calculator: Exact Age in Years, Months & Days | Calculator10">
+<meta property="og:description" content="Free age calculator: exact age, total days and weeks, and days until your next birthday.">
+<meta property="og:url" content="https://calculator10.com/age-calculator.html">
+<meta property="og:image" content="https://calculator10.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<title>Age Calculator: Exact Age in Years, Months & Days | Calculator10</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://calculator10.com/age-calculator.html#app","name":"Age Calculator - Calculator10","url":"https://calculator10.com/age-calculator.html","applicationCategory":"UtilitiesApplication","applicationSubCategory":"Age calculator","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free age calculator: exact age in years, months and days, total days and weeks, and days until your next birthday.","inLanguage":"en","provider":{"@type":"WebSite","name":"Calculator10","url":"https://calculator10.com/"}},{"@type":"FAQPage","@id":"https://calculator10.com/age-calculator.html#faq","mainEntity":[{"@type":"Question","name":"How is my exact age calculated?","acceptedAnswer":{"@type":"Answer","text":"The calculator counts full years, then full months, then days between your date of birth and today. Months and days are adjusted when the day of the month is smaller than your birth day."}},{"@type":"Question","name":"How many days have I lived?","acceptedAnswer":{"@type":"Answer","text":"The total days are the number of days from your date of birth to today, and total weeks are those days divided by 7."}},{"@type":"Question","name":"Is my date of birth saved?","acceptedAnswer":{"@type":"Answer","text":"No. The date is used only in your browser to calculate the result and is not stored or sent anywhere."}}]}]}
+</script>
+<style>
+:root{--page:#F3F5F1;--card:#FFFFFF;--ink:#16231F;--muted:#55655F;--line:#C3CCC6;--accent:#A93C0C}
+body{font-family:Segoe UI,Tahoma,Arial,sans-serif;max-width:720px;margin:0 auto;padding:20px 16px 40px;line-height:1.65;color:var(--ink);background:var(--page)}
+a{color:var(--accent)}
+h1{font-size:26px;margin:12px 0 6px}
+h2{font-size:19px;margin:26px 0 8px}
+.crumb{font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0}
+label{display:block;font-weight:600;font-size:14px;margin:12px 0 4px}
+input{width:100%;height:46px;padding:0 12px;border:1px solid var(--line);border-radius:10px;font-size:16px;background:#fff;color:var(--ink);box-sizing:border-box}
+.hint{font-size:13px;color:var(--muted);margin:4px 0 0}
+button.go{width:100%;height:50px;margin-top:18px;background:var(--accent);color:#fff;border:0;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer}
+.result{margin-top:16px;padding:14px;background:#16231F;color:#EAF1EC;border-radius:12px;display:none;font-size:15px;line-height:1.6}
+.note{font-size:13px;color:var(--muted)}
+ul{padding-left:20px}
+li{margin:4px 0}
+footer{margin-top:30px;font-size:14px;color:var(--muted)}
+footer a{margin-right:12px}
+</style></head>
+<body>
+<p class="crumb"><a href="index.html">← Calculator10</a></p>
+<h1>Age Calculator</h1>
+<p>Find your exact age in years, months and days. You can also see your total number of days and weeks, and how many days are left until your next birthday. Pick your date of birth below. Everything runs in your browser, and nothing is stored or sent anywhere.</p>
+
+<div class="card">
+  <label for="age-dob">Date of birth</label>
+  <input id="age-dob" type="date" max="2026-11-03">
+  <p class="hint">Choose the date from the calendar, or type it on your phone.</p>
+  <button class="go" id="age-btn" type="button">Calculate my age</button>
+  <div id="age-result" class="result" role="status" aria-live="polite"></div>
+</div>
+
+<h2>How age is calculated</h2>
+<ul>
+  <li><strong>Years:</strong> full years between your date of birth and today.</li>
+  <li><strong>Months and days:</strong> the remaining months and days after the full years.</li>
+  <li><strong>Total days and weeks:</strong> every day from your birth date to today, and that number divided by 7.</li>
+  <li><strong>Next birthday:</strong> the number of days from today to your next birthday.</li>
+</ul>
+
+<h2>Common questions</h2>
+<p><strong>How is my exact age calculated?</strong> The calculator counts full years, then full months, then days between your date of birth and today. Months and days are adjusted when the day of the month is smaller than your birth day.</p>
+<p><strong>How many days have I lived?</strong> The total days are the number of days from your date of birth to today, and total weeks are those days divided by 7.</p>
+<p><strong>Is my date of birth saved?</strong> No. The date is used only in your browser to calculate the result, and it is not stored or sent anywhere.</p>
+
+<p class="note">The result is a simple calculation. Official records, such as your birth certificate or ID card, are the proper source for legal age.</p>
+
+<footer>
+  <a href="privacy.html">Privacy Policy</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a>
+  <p>© Calculator10. All rights reserved.</p>
+</footer>
+<script src="age.js"></script>
+</body></html>
