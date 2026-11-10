@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Free unit converter for length, weight, temperature, speed, volume, time, data, area and numeral systems. Includes tola, seer and maund. Runs in your browser.">
+<meta name="theme-color" content="#16231F">
+<link rel="canonical" href="https://calculator10.com/unit-converter.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Calculator10">
+<meta property="og:title" content="Unit Converter: Length, Weight, Temperature & More | Calculator10">
+<meta property="og:description" content="Free unit converter for length, weight, temperature, speed, volume, time, data, area and numeral systems. Includes tola, seer and maund. Runs in your browser.">
+<meta property="og:url" content="https://calculator10.com/unit-converter.html">
+<meta property="og:image" content="https://calculator10.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Unit Converter: Length, Weight, Temperature & More | Calculator10">
+<meta name="twitter:description" content="Free unit converter for length, weight, temperature, speed, volume, time, data, area and numeral systems. Includes tola, seer and maund. Runs in your browser.">
+<title>Unit Converter: Length, Weight, Temperature & More | Calculator10</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "@id": "https://calculator10.com/unit-converter.html#app",
+   "name": "Unit Converter - Calculator10",
+   "url": "https://calculator10.com/unit-converter.html",
+   "applicationCategory": "UtilitiesApplication",
+   "applicationSubCategory": "Unit Converter",
+   "operatingSystem": "Any (web browser)",
+   "browserRequirements": "Requires JavaScript",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "description": "Free unit converter for length, weight, temperature, speed, volume, time, data, area and numeral systems. Includes tola, seer and maund. Runs in your browser.",
+   "inLanguage": "en",
+   "provider": {
+    "@type": "WebSite",
+    "name": "Calculator10",
+    "url": "https://calculator10.com/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://calculator10.com/unit-converter.html#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Why are tola and seer values fixed?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The page uses the standard conversions shown on it: 1 tola = 11.6638 g, 1 seer = 80 tola, 1 maund = 40 seer. Local trade practice can differ, so check with your seller for exact weights."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I convert negative numbers?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Only for temperature. Length, weight and the other categories need zero or positive values."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is my data saved?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Values are used only in your browser and are not stored or sent anywhere."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+:root{
+  --page:#DCE3DE;--device:#F3F5F1;--ink:#16231F;--muted:#55655F;--line:#C3CCC6;
+  --field:#E6EBE6;--key:#FFFFFF;--key-edge:#BAC4BE;--key-ink:#16231F;
+  --op:#2A3A35;--op-edge:#121C19;--op-ink:#FFFFFF;
+  --accent:#C9480F;--accent-edge:#8F3409;--accent-ink:#FFFFFF;
+  --clear:#F6D9CE;--clear-edge:#DDB3A3;--clear-ink:#8A2E0B;
+  --result-bg:#16231F;--result-ink:#EAF1EC;
+  --mono:'Chivo Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
+  --sans:'Figtree','Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+}
+body.dark-theme{
+  --page:#0D1613;--device:#17231F;--ink:#E9F0EA;--muted:#8FA39B;--line:#2B3B35;
+  --field:#0F1A16;--key:#22332D;--key-edge:#0B1411;--key-ink:#E9F0EA;
+  --op:#3E564D;--op-edge:#1B2A24;--op-ink:#FFFFFF;
+  --accent:#FF7A2E;--accent-edge:#B8480F;--accent-ink:#1A0E06;
+  --clear:#4A2A1E;--clear-edge:#25140D;--clear-ink:#FFD9C8;
+  --result-bg:#E9F0EA;--result-ink:#16231F;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--page);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:24px 16px 0;transition:background-color .25s,color .25s}
+button,input,select{font-family:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+.app{width:100%;max-width:940px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px}
+.brand{font-family:var(--mono);font-weight:700;font-size:19px;letter-spacing:-.02em;margin:0}
+.brand .h1-sub{display:block;font-family:inherit;font-size:12px;font-weight:600;letter-spacing:0;opacity:.8}
+.tagline{margin:0;color:var(--muted);font-size:12px;line-height:1.3}
+.top-actions{display:flex;gap:8px;align-items:center}
+body.skin-golden{--page:#F6ECD2;--device:#FFF8E6;--ink:#3A2A06;--muted:#7A6530;--line:#E3CF9A;--field:#F3E4B8;--key:#FFFBEF;--key-edge:#E0CB93;--key-ink:#3A2A06;--op:#8A5A00;--op-edge:#5E3D00;--op-ink:#FFFFFF;--accent:#9A5B00;--accent-edge:#6B3F00;--accent-ink:#FFFFFF;--clear:#F5DDB0;--clear-edge:#DDBE7E;--clear-ink:#6B3F00;--result-bg:#3A2A06;--result-ink:#FFF1C9}
+body.skin-pink{--page:#FBE4EE;--device:#FFF3F8;--ink:#3B1224;--muted:#8A4A66;--line:#EFC1D5;--field:#F9D8E6;--key:#FFFFFF;--key-edge:#EBB9CF;--key-ink:#3B1224;--op:#C2185B;--op-edge:#8E0F42;--op-ink:#FFFFFF;--accent:#C2185B;--accent-edge:#8E0F42;--accent-ink:#FFFFFF;--clear:#F9D0E0;--clear-edge:#E7A3BF;--clear-ink:#8E0F42;--result-bg:#5B1236;--result-ink:#FFE8F1}
+.top-actions{flex-wrap:wrap;justify-content:flex-end}
+select.theme-toggle-btn{appearance:auto;max-width:150px}
+/* Header: Install App on top; Skin + mic (🎤 Calc) on one row underneath, no extra space */
+#skin-select{width:auto;min-width:0;height:36px;padding:0 8px;font-size:13px}
+#voice-nav-btn{height:36px;padding:0 9px;font-size:13px;white-space:nowrap}
+.top-actions{gap:6px}
+/* Secret-code effects (Simple calculator). Canvas overlay never blocks taps. */
+.fx-canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:999}
+body.fx-rainbow{animation:fxhue 6s linear 1}
+@keyframes fxhue{from{filter:hue-rotate(0deg)}to{filter:hue-rotate(360deg)}}
+#magic-hint{text-align:center;margin:10px 0 0}
+
+/* Skin dropdown and 🎤 Calc always stay on one row */
+.ctl{display:flex;flex-wrap:nowrap;align-items:center;gap:6px}
+.ctl #skin-select{flex:0 0 auto;max-width:none}
+@media (max-width:350px){.ctl #skin-select,#voice-nav-btn{font-size:12px;padding-left:6px;padding-right:6px}.brand{font-size:17px}}
+.calc-actions{margin:0 0 12px}
+.slider{position:relative;overflow:hidden;border-radius:18px;margin:0 0 20px;background:var(--result-bg);color:var(--result-ink)}
+.slider{width:100%;max-width:100%;min-width:0;box-sizing:border-box}
+.slider .track{width:100%}
+.slide{min-width:0}
+.track{display:flex;transition:transform .5s ease}
+.slide{flex:0 0 100%;box-sizing:border-box;padding:20px 18px 58px;min-height:150px;border-left:6px solid var(--accent)}
+.slide h2{margin:0 0 6px;font-size:19px;color:inherit;letter-spacing:0}
+.slide p{margin:0 0 12px;font-size:14.5px;line-height:1.5;opacity:.93}
+.s-link{display:inline-block;background:transparent;color:inherit;border:1px solid currentColor;border-radius:999px;padding:7px 16px;min-height:36px;font-size:13.5px;font-weight:600;cursor:pointer;text-decoration:none}
+.s-ctrl{position:absolute;left:0;right:0;bottom:10px;display:flex;align-items:center;justify-content:center;gap:8px}
+.s-btn{background:rgba(255,255,255,.16);color:inherit;border:0;border-radius:999px;min-width:36px;height:36px;font-size:17px;cursor:pointer}
+.s-dots{display:flex;gap:2px}
+.s-dot{width:22px;height:22px;border:0;background:transparent;padding:0;cursor:pointer;position:relative}
+.s-dot::before{content:"";position:absolute;inset:6px;border-radius:50%;background:rgba(255,255,255,.4)}
+.s-dot[aria-current="true"]::before{background:#fff}
+body.dark-theme .s-btn{background:rgba(0,0,0,.14)}
+body.dark-theme .s-dot::before{background:rgba(0,0,0,.3)}
+body.dark-theme .s-dot[aria-current="true"]::before{background:#16231F}
+@media (prefers-reduced-motion:reduce){.track{transition:none}}
+#reviews .slide{min-height:0;padding:8px 12px 40px}
+#hero .slide{min-height:0;padding:12px 14px 46px}
+#hero .slide h2{font-size:15px;margin-bottom:3px}
+#hero .slide p{font-size:12.5px;line-height:1.4;margin-bottom:8px}
+#hero .s-link{padding:4px 12px;min-height:30px;font-size:12px}
+#hero .s-ctrl{bottom:6px}
+#hero .s-btn{height:28px;min-width:30px;font-size:14px}
+#hero .s-dot{width:16px;height:16px}
+#reviews.single .slide{padding:9px 14px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px}
+#reviews.single .slide h2,#reviews.single .slide p{margin:0}
+#reviews.single .slide .s-link{margin:0}
+#reviews .slide h2{font-size:13px;margin-bottom:2px}
+#reviews .slide p{font-size:11.5px;line-height:1.35;margin-bottom:6px}
+#reviews .s-link{padding:3px 10px;min-height:26px;font-size:11.5px}
+.section-title{font-size:13px;margin:14px 0 6px;text-align:center}
+.share-row{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin:0 0 12px;max-width:100%}
+.share-row a,.share-row button{display:inline-flex;align-items:center;white-space:normal;min-width:0;max-width:100%;min-height:30px;padding:4px 9px;font-size:11.5px !important;background:var(--device);color:var(--ink);border:1px solid var(--line);border-radius:999px;font-size:14px;font-weight:600;text-decoration:none;cursor:pointer}
+.share-row a:hover,.share-row button:hover{border-color:var(--accent)}
+.faq{margin:18px 0}
+.faq h2{font-size:16px;margin:0 0 6px;text-align:center}
+.faq-item{border-bottom:1px solid var(--line);padding:8px 2px}
+.faq-item summary{cursor:pointer;list-style:none}
+.faq-item summary h3{display:inline;font-size:14px;margin:0}
+.faq-item p{font-size:13px;margin:6px 0 0;line-height:1.5}
+.review-name{font-weight:700;font-size:14px;opacity:.95}
+
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--device);padding:10px 14px;border-radius:0 0 10px 0;z-index:10}
+.skip:focus{left:0}
+.r-actions{margin-top:10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.r-act{background:transparent;color:inherit;border:1px solid currentColor;border-radius:999px;padding:6px 14px;min-height:36px;font-size:13px;font-weight:600;cursor:pointer;opacity:.9}
+.r-act:hover{opacity:1}
+.r-status{font-size:13px}
+.preview{min-height:20px;padding:2px 8px 0;text-align:right;font-family:var(--mono);font-size:14px;color:var(--muted);direction:ltr}
+#install-btn{background:var(--accent);color:var(--accent-ink);border-color:var(--accent-edge)}
+.theme-toggle-btn[hidden]{display:none}
+.theme-toggle-btn{background:var(--device);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap}
+
+.layout{display:grid;grid-template-columns:200px minmax(0,1fr);gap:20px;align-items:start}
+.tabs{display:flex;flex-direction:column;gap:2px}
+.tab-group{margin:14px 0 4px;padding-left:12px;font-size:13px;font-weight:600;color:var(--muted)}
+.tab-group:first-child{margin-top:0}
+.tab-ico{display:inline-block;width:1.4em;text-align:center;margin-right:2px}
+a.tab-btn{display:block;text-decoration:none;color:inherit;box-sizing:border-box}
+.tab-btn{display:block;width:100%;text-align:left;background:transparent;border:0;border-left:3px solid transparent;border-radius:0 8px 8px 0;padding:9px 12px;font-size:15px;font-weight:500;cursor:pointer}
+.tab-btn:hover{background:var(--device)}
+.tab-btn.active{background:var(--device);border-left-color:var(--accent);font-weight:700}
+
+.device{background:var(--device);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 1px 0 #ffffff80 inset,0 18px 40px -22px #0a1a1566}
+.calc-sec{display:none}.calc-sec.active{display:block}
+h2{font-size:20px;margin:0 0 18px;letter-spacing:-.01em}
+
+.display{width:100%;height:84px;background:var(--field);border:1px solid var(--line);border-radius:14px;text-align:right;padding:0 18px;font-family:var(--mono);font-size:clamp(26px,6vw,36px);font-weight:500;margin-bottom:16px;box-shadow:inset 0 2px 6px #0000001a}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+button.btn{height:58px;border:0;border-radius:12px;background:var(--key);color:var(--key-ink);font-family:var(--mono);font-size:20px;font-weight:500;cursor:pointer;box-shadow:0 3px 0 var(--key-edge);transition:transform .06s,box-shadow .06s;min-width:0;padding:0}
+button.btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--key-edge)}
+button.btn.op{background:var(--op);color:var(--op-ink);box-shadow:0 3px 0 var(--op-edge)}
+button.btn.op:active{box-shadow:0 1px 0 var(--op-edge)}
+button.btn.fn{background:var(--field);box-shadow:0 3px 0 var(--key-edge);font-size:17px}
+button.btn.clear-key{background:var(--clear);color:var(--clear-ink);box-shadow:0 3px 0 var(--clear-edge)}
+button.btn.equals-key{background:var(--accent);color:var(--accent-ink);box-shadow:0 3px 0 var(--accent-edge)}
+button.btn.equals-key:active{box-shadow:0 1px 0 var(--accent-edge)}
+button.btn.wide{grid-column:span 2}
+.note{font-size:13px;color:var(--muted);line-height:1.55;margin:14px 0 0;max-width:62ch}
+
+.history-box{margin-top:16px;border-top:1px dashed var(--line);padding-top:12px;max-height:150px;overflow-y:auto;display:none}
+.history-box h4{margin:0 0 6px;font-size:13px;font-weight:600;color:var(--muted)}
+.history-item{font-family:var(--mono);font-size:13px;padding:5px 0;color:var(--muted);overflow-wrap:anywhere;border-bottom:1px solid var(--line)}
+.history-item:last-child{border-bottom:0}
+
+.form{max-width:460px}
+.input-group{margin-bottom:16px}
+.input-group label{display:block;margin-bottom:6px;font-weight:600;font-size:14px}
+.input-group input,.input-group select{width:100%;height:48px;padding:0 14px;background:var(--field);border:1px solid var(--line);border-radius:10px;font-size:16px;box-shadow:inset 0 2px 4px #0000000f}
+.input-group input:focus,.input-group select:focus{border-color:var(--accent)}
+.date-row{position:relative;display:flex;gap:8px;align-items:center}
+.date-row #dob-text{flex:1;min-width:0;font-family:var(--mono);letter-spacing:.04em}
+.icon-btn{flex:0 0 48px;height:48px;border:1px solid var(--line);border-radius:10px;background:var(--key);box-shadow:0 3px 0 var(--key-edge);font-size:19px;cursor:pointer;padding:0;transition:transform .06s,box-shadow .06s}
+.icon-btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--key-edge)}
+.dob-native{position:absolute;right:0;bottom:0;width:1px;height:1px;opacity:0;pointer-events:none;border:0;padding:0}
+.f-tools{display:grid;grid-template-columns:minmax(0,1fr) 190px 150px;gap:10px;margin-bottom:12px}
+.f-tools input,.f-tools select{height:46px;padding:0 14px;background:var(--field);border:1px solid var(--line);border-radius:10px;font-size:16px;width:100%}
+.f-cat h3{margin:22px 0 10px;font-size:16px;color:var(--muted);font-weight:700}
+.f-item{background:var(--key);border:1px solid var(--line);border-radius:12px;margin-bottom:8px;overflow:hidden}
+.f-item summary{cursor:pointer;padding:12px 14px;list-style:none;display:flex;flex-direction:column;gap:4px}
+.f-item summary::-webkit-details-marker{display:none}
+.f-name{font-weight:700;font-size:15px}
+.f-imp{font-size:13px;color:var(--ink);background:var(--field);border-radius:8px;padding:4px 10px;align-self:flex-start;border-inline-start:3px solid var(--accent)}
+.f-formula{font-family:var(--mono);font-size:14px;color:var(--accent);overflow-wrap:anywhere;line-height:1.5}
+.f-item[open]{border-color:var(--accent)}
+.f-body{padding:2px 14px 14px;border-top:1px dashed var(--line)}
+.f-desc{margin:10px 0;font-size:14px;color:var(--muted)}
+.f-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:12px}
+.f-fields .input-group{margin:0}
+.f-fields .input-group label{font-size:13px}
+.f-body .action-btn{height:44px;font-size:15px}
+.f-result{display:none;margin-top:12px;padding:12px 14px;background:var(--result-bg);color:var(--result-ink);border-radius:10px;border-left:6px solid var(--accent);font-family:var(--mono);font-size:14px;line-height:1.7;white-space:pre-line;overflow-wrap:anywhere}
+@media(max-width:760px){.f-tools{grid-template-columns:minmax(0,1fr)}}
+.action-btn{width:100%;height:50px;background:var(--accent);color:var(--accent-ink);border:0;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 3px 0 var(--accent-edge);transition:transform .06s,box-shadow .06s}
+.action-btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--accent-edge)}
+.result{display:none;margin-top:18px;padding:16px 18px;background:var(--result-bg);color:var(--result-ink);border-radius:12px;font-family:var(--mono);font-size:15px;line-height:1.8;overflow-wrap:anywhere;border-left:6px solid var(--accent)}
+
+footer{width:100%;max-width:940px;margin-top:32px;padding:20px 4px 28px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px}
+footer p{margin:0}
+footer a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;margin-right:14px}
+footer a:last-child{margin-right:0}
+
+@media(max-width:760px){
+  body{padding:16px 10px 0}
+  .layout{grid-template-columns:minmax(0,1fr);gap:14px}
+  .tabs{flex-direction:row;overflow-x:auto;gap:6px;padding-bottom:6px;scrollbar-width:thin}
+  .tab-group{display:none}
+  .tab-btn{width:auto;flex:0 0 auto;white-space:nowrap;border:1px solid var(--line);border-radius:999px;padding:8px 14px;background:var(--device)}
+  .tab-btn.active{background:var(--ink);color:var(--device);border-color:var(--ink)}
+  .device{padding:16px;border-radius:18px}
+  button.btn{height:54px;font-size:19px}
+  .display{height:76px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.btn-row{display:flex;gap:8px;margin-top:10px}.btn-row button{flex:1;height:44px;border-radius:10px;font-weight:600;cursor:pointer;background:var(--device);color:var(--ink);border:1px solid var(--line)}</style></head>
+<body>
+<div class="app">
+<header class="topbar">
+  <div>
+    <p class="brand"><a href="index.html" style="color:inherit;text-decoration:none">Calculator10</a></p>
+    <p class="tagline">Free online unit converter</p>
+  </div>
+  <div class="top-actions">
+    <span class="ctl"><select class="theme-toggle-btn" id="skin-select" aria-label="Calculator skin"><option value="classic">🎨 Classic</option><option value="golden">✨ Golden</option><option value="dark">🌙 Dark</option><option value="pink">🌸 Pink</option></select></span>
+    <button class="theme-toggle-btn" id="theme-btn" type="button" hidden>🌙 Dark</button>
+  </div>
+</header>
+<p class="crumb"><a href="index.html">← Back to Calculator10 homepage</a></p>
+<main class="device" id="main">
+<h1>Unit Converter Online (Free)</h1>
+<p class="lead">Convert between metric, imperial, South Asian and digital units. Pick a category, choose the units, type a value and press Convert.</p>
+<section id="sec-units" class="calc-sec active">
+        <h2>Unit converter</h2>
+        <div class="form">
+          <div class="input-group"><label for="unit-cat">Type</label>
+            <select id="unit-cat" onchange="fillUnits()"><option value="length">Length</option><option value="weight">Weight</option><option value="temp">Temperature</option><option value="speed">Speed</option><option value="volume">Volume</option><option value="time">Time</option><option value="data">Data (digital storage)</option><option value="area">Area</option><option value="numeral">Numeral system</option></select></div>
+          <div class="input-group"><label for="unit-val">Value</label><input type="number" id="unit-val" step="any" placeholder="e.g. 5"></div>
+          <div class="input-group"><label for="unit-from">From</label><select id="unit-from"></select></div>
+          <div class="input-group"><label for="unit-to">To</label><select id="unit-to"></select></div>
+          <button class="action-btn" onclick="convertUnits()">Convert</button>
+    <div class="btn-row"><button type="button" onclick="swapUnits()">⇅ Swap units</button><button type="button" onclick="resetUnits()">Reset</button></div>
+          <div id="units-result" class="result" aria-live="polite"></div>
+        </div>
+        <p class="note">1 seer = 80 tola (about 933.1 g). 1 maund = 40 seer (about 37.32 kg).</p>
+      </section>
+</main>
+<section class="info">
+<h2>How to use this calculator</h2>
+<ol><li>Choose a category (for example Length or Weight).</li><li>Type the value you want to convert.</li><li>Choose the unit you have (From) and the unit you want (To).</li><li>Press Convert. Use Swap units to reverse the direction, or Reset to start again.</li></ol>
+<h2>Supported categories and units</h2>
+<ul><li>Length: millimetre, centimetre, metre, kilometre, inch, foot, yard, mile</li><li>Weight: gram, kilogram, tola, seer, maund, pound, ounce</li><li>Temperature: Celsius, Fahrenheit, Kelvin</li><li>Speed: km/h, m/s, mph, knot, ft/s</li><li>Volume: litre, millilitre, cubic metre, US gallon, US quart, US cup, US fluid ounce, US tablespoon, US teaspoon</li><li>Time: millisecond, second, minute, hour, day, week, month (average), year (365.2425 days)</li><li>Data: bit, byte, KB, MB, GB, TB (decimal) and KiB, MiB, GiB, TiB (binary)</li><li>Area: square centimetre, square metre, square foot, square yard, acre, hectare, square kilometre, square mile</li><li>Numeral system: decimal, binary, octal, hexadecimal (whole numbers only)</li></ul>
+<h2>Examples</h2>
+<ul><li>1 mile = 1.609 km</li><li>100 °F = 37.78 °C</li><li>1 tola = 11.6638 g (1 seer = 80 tola)</li><li>1 GB = 1,000 MB (decimal); 1 GiB = 1,024 MiB (binary)</li><li>255 (decimal) = FF (hexadecimal) = 11111111 (binary)</li></ul>
+<h2>Formulas and rules</h2>
+<ul><li>Other units: value × factor of the From unit ÷ factor of the To unit, using one base unit per category.</li><li>Temperature: Fahrenheit to Celsius = (F − 32) × 5 ÷ 9; Kelvin = Celsius + 273.15. Below −273.15 °C is rejected.</li><li>Negative values are accepted for temperature only. For other categories, negative values are rejected.</li><li>Numeral system: whole numbers only. Values are converted using their base.</li></ul>
+<h2>Frequently asked questions</h2>
+<p><strong>Why are tola and seer values fixed?</strong> The page uses the standard conversions shown on it: 1 tola = 11.6638 g, 1 seer = 80 tola, 1 maund = 40 seer. Local trade practice can differ, so check with your seller for exact weights.</p>
+<p><strong>Can I convert negative numbers?</strong> Only for temperature. Length, weight and the other categories need zero or positive values.</p>
+<p><strong>Is my data saved?</strong> No. Values are used only in your browser and are not stored or sent anywhere.</p>
+
+<h2>Related calculators</h2>
+<ul><li><a href="land-area-calculator.html">Land area calculator</a></li><li><a href="simple-calculator.html">Simple calculator</a></li><li><a href="index.html">All calculators on the homepage</a></li></ul>
+<p class="note">Results are shown with up to 6 decimal places for very small numbers and standard formatting for others. Check the units for scientific or legal use.</p>
+</section>
+<footer>
+  <p>Privacy: calculations run in your browser and are not sent to our servers.</p>
+  <p><a href="privacy.html">Privacy Policy</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></p>
+  <p>© Calculator10. All rights reserved.</p>
+</footer>
+</div>
+<script src="calc-core.js"></script>
+<script>let lastLight = 'classic';
+function setSkin(name, noSave) {
+  const b = document.body;
+  b.classList.remove('dark-theme', 'skin-golden', 'skin-pink');
+  if (name === 'dark') b.classList.add('dark-theme');
+  else if (name === 'golden') b.classList.add('skin-golden');
+  else if (name === 'pink') b.classList.add('skin-pink');
+  if (name !== 'dark') lastLight = name;
+  const dark = name === 'dark', tb = document.getElementById('theme-btn');
+  tb.textContent = dark ? '☀️ Light' : '🌙 Dark';
+  tb.setAttribute('aria-pressed', String(dark));
+  const sel = document.getElementById('skin-select'); if (sel) sel.value = name;
+  if (!noSave) { try { localStorage.setItem('c10skin', name); } catch (e) { /* storage unavailable */ } }
+}
+(function () {
+  let sk = null;
+  try { sk = localStorage.getItem('c10skin'); } catch (e) { /* ignore */ }
+  if (!['classic', 'golden', 'dark', 'pink'].includes(sk)) sk = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'classic';
+  setSkin(sk, true);
+})();</script>
+<script>
+(function () {
+  var sel = document.getElementById('skin-select');
+  if (sel) sel.addEventListener('change', function (e) { setSkin(e.target.value); });
+})();
+fillUnits(); document.getElementById('unit-from').value = 'm'; document.getElementById('unit-to').value = 'ft';
+</script>
+<script>
+/* Unit converter page: validation + swap + reset (uses the homepage engine functions unchanged). */
+function convertUnits() {
+  const cat = document.getElementById('unit-cat').value;
+  const raw = document.getElementById('unit-val').value.trim();
+  if (!raw) { showError('units-result', new Error('Please enter a value.')); return; }
+  if (cat !== 'temp' && cat !== 'numeral' && Number(raw) < 0) { showError('units-result', new Error('Negative values are not allowed for this category.')); return; }
+  calcUnits();
+}
+function swapUnits() {
+  const f = document.getElementById('unit-from'), t = document.getElementById('unit-to');
+  const tmp = f.value; f.value = t.value; t.value = tmp;
+  if (document.getElementById('unit-val').value.trim()) convertUnits();
+}
+function resetUnits() {
+  document.getElementById('unit-cat').value = 'length';
+  fillUnits(); document.getElementById('unit-from').value = 'm'; document.getElementById('unit-to').value = 'ft';
+  document.getElementById('units-result').style.display = 'none';
+  document.getElementById('units-result').textContent = '';
+}
+function resetLand() {
+  document.getElementById('land-val').value = '';
+  document.getElementById('land-from').value = 'marla';
+  document.getElementById('land-marla').value = '272.25';
+  document.getElementById('land-result').style.display = 'none';
+  document.getElementById('land-result').textContent = '';
+}
+</script>
+</body></html>
